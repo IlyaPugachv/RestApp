@@ -5,7 +5,7 @@ class ImageVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    private let imageURL = "https://w.forfun.com/fetch/55/550a7b8cefbad7d3b83f651aa7d8d46e.jpeg"
+    private let imageURL = "https://images.squarespace-cdn.com/content/v1/535dcb0ce4b03ecd54f29b7a/1418620135456-Y2D9IJ7CVKOYADX7ZOGK/impala+poster+11x16.5+night+exclusive.jpg"
     
     override func viewDidLoad() {
         super.viewDidLoad()
