@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Rest App
-//
-//  Created by Илья Пугачёв on 11.10.23.
-//
-
 import UIKit
 
 @main
