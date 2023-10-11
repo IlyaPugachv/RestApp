@@ -76,8 +76,6 @@ class UsersTVC: UITableViewController {
             
             guard let self else { return }
             
-            print(response)
-            
             if let error = error {
                 print(error)
             }

@@ -1,6 +1,5 @@
 import UIKit
 
-/// CaseIterable - создать массив из enum
 enum UserActions: String, CaseIterable {
     case downloadImage = "Download image"
     case users = "Open users list"
@@ -20,7 +19,7 @@ class CollectionVC: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActionCVCell
         let userAction = userActions[indexPath.row].rawValue
-        cell.infiLbl.text = userAction
+        cell.infoLbl.text = userAction
         return cell
     }
 
