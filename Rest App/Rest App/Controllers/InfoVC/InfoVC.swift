@@ -1,4 +1,5 @@
 import UIKit
+//import MapKit
 
 class InfoVC: UIViewController {
     
@@ -12,10 +13,20 @@ class InfoVC: UIViewController {
     @IBOutlet weak var AlbumsBtn: UIButton!
     @IBOutlet weak var toDoBtn: UIButton!
     
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+    }
+    
+    @IBAction func mapBtnAction(_ sender: UIButton) {
+        openMapsForUserLocation()
+    }
+    
+    private func openMapsForUserLocation() {
+        
     }
     
     private func setupUI() {
@@ -34,7 +45,5 @@ class InfoVC: UIViewController {
         toDoBtn.tintColor = .white
         toDoBtn.layer.cornerRadius = postsBtn.bounds.height / 2
         toDoBtn.clipsToBounds = true
-        
-        
     }
 }
