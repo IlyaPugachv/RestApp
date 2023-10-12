@@ -18,12 +18,6 @@ class ImageVC: UIViewController {
         
         let urlRequest = URLRequest(url: url)
         
-//        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-//            print(data)
-//            print(response)
-//            print(error)
-//        }.resume()
-        
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             
             DispatchQueue.main.async {
@@ -43,7 +37,7 @@ class ImageVC: UIViewController {
                 let image = UIImage(data: data) {
                     self?.imageView.image = image
                 } else {
-                    // тут можно пользователю показать ошибку картинки
+                    print("Error image")
                 }
             }
         }

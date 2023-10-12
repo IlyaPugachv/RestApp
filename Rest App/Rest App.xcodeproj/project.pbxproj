@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A645E2AD7DC910086468B /* ExtView.swift */; };
+		BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A64612AD7DE7A0086468B /* InfoVC.swift */; };
 		BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */; };
 		BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5E2AD6B41D00C53162 /* SceneDelegate.swift */; };
 		BC679C642AD6B41D00C53162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC679C622AD6B41D00C53162 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0A645E2AD7DC910086468B /* ExtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtView.swift; sourceTree = "<group>"; };
+		BC0A64612AD7DE7A0086468B /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		BC679C592AD6B41D00C53162 /* Rest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC679C5E2AD6B41D00C53162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0A645D2AD7DC5E0086468B /* Extencions */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A645E2AD7DC910086468B /* ExtView.swift */,
+			);
+			path = Extencions;
+			sourceTree = "<group>";
+		};
+		BC0A64602AD7DE4D0086468B /* InfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A64612AD7DE7A0086468B /* InfoVC.swift */,
+			);
+			path = InfoVC;
+			sourceTree = "<group>";
+		};
 		BC679C502AD6B41D00C53162 = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +92,10 @@
 		BC679C5B2AD6B41D00C53162 /* Rest App */ = {
 			isa = PBXGroup;
 			children = (
+				BC0A645D2AD7DC5E0086468B /* Extencions */,
 				BC679C732AD6B4B100C53162 /* Models */,
 				BC679C702AD6B46E00C53162 /* Views */,
 				BC679C722AD6B49500C53162 /* Controllers */,
-				BC679C752AD6B4D000C53162 /* UsersList */,
-				BC679C742AD6B4C600C53162 /* ImageView */,
 				BC679C762AD6B4E600C53162 /* Assets */,
 				BC679C712AD6B47E00C53162 /* App */,
 				BC679C6A2AD6B41F00C53162 /* Info.plist */,
@@ -105,6 +124,7 @@
 		BC679C722AD6B49500C53162 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC0A64602AD7DE4D0086468B /* InfoVC */,
 				BC679C8D2AD6BA6200C53162 /* UsersList */,
 				BC679C8A2AD6B9F800C53162 /* ImageView */,
 				BC679C832AD6B8ED00C53162 /* ActionsCollection */,
@@ -120,20 +140,6 @@
 				BC679C7A2AD6B62800C53162 /* User data */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		BC679C742AD6B4C600C53162 /* ImageView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ImageView;
-			sourceTree = "<group>";
-		};
-		BC679C752AD6B4D000C53162 /* UsersList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UsersList;
 			sourceTree = "<group>";
 		};
 		BC679C762AD6B4E600C53162 /* Assets */ = {
@@ -250,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */,
 				BC679C822AD6B8A200C53162 /* ApiConstants.swift in Sources */,
 				BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */,
 				BC679C8C2AD6BA1D00C53162 /* ImageVC.swift in Sources */,
@@ -260,6 +267,7 @@
 				BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */,
 				BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */,
 				BC679C802AD6B7FA00C53162 /* Company.swift in Sources */,
+				BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */,
 				BC679C8F2AD6BA7B00C53162 /* UsersTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
