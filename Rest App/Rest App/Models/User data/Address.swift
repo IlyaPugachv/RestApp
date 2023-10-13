@@ -5,5 +5,5 @@ struct Address: Codable {
     let suite: String?
     let city: String?
     let zipcode: String?
-    let geoposition: Geoposition?
+    let geo: Geo?
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Geoposition: Codable {
+struct Geo: Codable {
     let lat: String?
     let lng: String?
 }

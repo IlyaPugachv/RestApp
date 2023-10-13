@@ -23,6 +23,14 @@ class UsersTVC: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "InfoVC") as! InfoVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     private func fetchUsers() {
         
         guard let usersURL = ApiConstants.usersURL else { return }
