@@ -339,6 +339,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="Posts">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="postsBtnAction:" destination="Kod-gj-M3T" eventType="touchUpInside" id="YSE-28-sog"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-wp-M7a">
                                                                 <rect key="frame" x="140.33333333333334" y="0.0" width="82.333333333333343" height="34.333333333333336"/>
@@ -347,12 +350,18 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="Albums">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="albumsBtnAction:" destination="Kod-gj-M3T" eventType="touchUpInside" id="TMn-kZ-1Fc"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn9-c7-khr">
                                                                 <rect key="frame" x="280.66666666666669" y="0.0" width="82.333333333333314" height="34.333333333333336"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="ToDo"/>
+                                                                <connections>
+                                                                    <action selector="toDoBtnAction:" destination="Kod-gj-M3T" eventType="touchUpInside" id="FN8-KK-JsV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>

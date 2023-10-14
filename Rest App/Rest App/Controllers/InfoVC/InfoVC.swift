@@ -24,6 +24,33 @@ final class InfoVC: UIViewController {
     
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
     
+    
+    @IBAction func postsBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "PostsTVC") as! PostsTVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func albumsBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "AlbumsAndPhotos", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AlbumsTVC") as! AlbumsTVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func toDoBtnAction(_ sender: UIButton) {
+//        let user = users[indexPath.row]
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(identifier: "InfoVC") as! InfoVC
+//        vc.user = user
+//        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
+    
+    
     private func openMapsForUserLocation() {
         if let user = user,
            let latitudeString = user.address?.geo?.lat,
