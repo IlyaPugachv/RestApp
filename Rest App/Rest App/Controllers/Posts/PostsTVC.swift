@@ -10,38 +10,30 @@ import UIKit
 class PostsTVC: UITableViewController {
     
     var user: User?
+    var posts: [Post] = []
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    override func viewWillAppear(_ animated: Bool) {
+        fetchPosts()
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+ 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        posts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        var post = posts[indexPath.row]
+        cell.textLabel?.text = post.title
+        cell.detailTextLabel?.text = post.body
         return cell
     }
-    */
+
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,4 +80,24 @@ class PostsTVC: UITableViewController {
     }
     */
 
+    private func fetchPosts() {
+        let userId = user?.id.description ?? ""
+        let urlPath = "\(ApiConstants.postsPath)?userId=\(userId)"
+        guard let url = URL(string: urlPath) else { return  }
+        
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
+            guard let self,
+                  let data = data else { return  }
+            do {
+                posts = try JSONDecoder().decode([Post].self, from: data)
+                print(posts)
+            } catch let error {
+                print(error)
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        task.resume()
+    }
 }

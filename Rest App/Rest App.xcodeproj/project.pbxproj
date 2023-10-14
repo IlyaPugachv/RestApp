@@ -28,6 +28,9 @@
 		BCF46DFB2ADAFA7E00A77F10 /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */; };
 		BCF46DFE2ADAFD5000A77F10 /* PostsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46DFD2ADAFD5000A77F10 /* PostsTVC.swift */; };
 		BCF46E012ADAFF2700A77F10 /* AlbumsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E002ADAFF2700A77F10 /* AlbumsTVC.swift */; };
+		BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E032ADB029400A77F10 /* PostModel.swift */; };
+		BCF46E082ADB046300A77F10 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E072ADB046300A77F10 /* AlbumModel.swift */; };
+		BCF46E0C2ADB04DF00A77F10 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToDo.storyboard; sourceTree = "<group>"; };
 		BCF46DFD2ADAFD5000A77F10 /* PostsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTVC.swift; sourceTree = "<group>"; };
 		BCF46E002ADAFF2700A77F10 /* AlbumsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTVC.swift; sourceTree = "<group>"; };
+		BCF46E032ADB029400A77F10 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		BCF46E072ADB046300A77F10 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +156,11 @@
 		BC679C732AD6B4B100C53162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BC679C772AD6B5C200C53162 /* UserModels.swift */,
-				BC679C812AD6B8A200C53162 /* ApiConstants.swift */,
+				BCF46E052ADB02B500A77F10 /* UserModel */,
+				BCF46E092ADB048A00A77F10 /* ApiConstants */,
+				BCF46E022ADB023E00A77F10 /* PostModel */,
+				BCF46E062ADB044600A77F10 /* AlbumModel */,
+				BCF46E0A2ADB04C500A77F10 /* ToDoModel */,
 				BC679C7A2AD6B62800C53162 /* User data */,
 			);
 			path = Models;
@@ -214,6 +223,46 @@
 				BCF46E002ADAFF2700A77F10 /* AlbumsTVC.swift */,
 			);
 			path = Albums;
+			sourceTree = "<group>";
+		};
+		BCF46E022ADB023E00A77F10 /* PostModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E032ADB029400A77F10 /* PostModel.swift */,
+			);
+			path = PostModel;
+			sourceTree = "<group>";
+		};
+		BCF46E052ADB02B500A77F10 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC679C772AD6B5C200C53162 /* UserModels.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		BCF46E062ADB044600A77F10 /* AlbumModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E072ADB046300A77F10 /* AlbumModel.swift */,
+			);
+			path = AlbumModel;
+			sourceTree = "<group>";
+		};
+		BCF46E092ADB048A00A77F10 /* ApiConstants */ = {
+			isa = PBXGroup;
+			children = (
+				BC679C812AD6B8A200C53162 /* ApiConstants.swift */,
+			);
+			path = ApiConstants;
+			sourceTree = "<group>";
+		};
+		BCF46E0A2ADB04C500A77F10 /* ToDoModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */,
+			);
+			path = ToDoModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */,
+				BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */,
 				BCF46DFE2ADAFD5000A77F10 /* PostsTVC.swift in Sources */,
 				BC679C822AD6B8A200C53162 /* ApiConstants.swift in Sources */,
 				BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */,
@@ -298,9 +348,11 @@
 				BC679C872AD6B95900C53162 /* CollectionVC.swift in Sources */,
 				BC679C782AD6B5C200C53162 /* UserModels.swift in Sources */,
 				BC679C7E2AD6B7E800C53162 /* Geoposition.swift in Sources */,
+				BCF46E0C2ADB04DF00A77F10 /* TodoModel.swift in Sources */,
 				BC679C7C2AD6B7B900C53162 /* Address.swift in Sources */,
 				BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */,
 				BCF46E012ADAFF2700A77F10 /* AlbumsTVC.swift in Sources */,
+				BCF46E082ADB046300A77F10 /* AlbumModel.swift in Sources */,
 				BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */,
 				BC679C802AD6B7FA00C53162 /* Company.swift in Sources */,
 				BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */,
