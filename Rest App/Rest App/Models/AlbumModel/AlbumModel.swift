@@ -1,6 +1,6 @@
 import Foundation
 
-struct Albom: Codable {
+struct Album: Codable {
     let userId: Int
     let id: Int
     let title: String?
