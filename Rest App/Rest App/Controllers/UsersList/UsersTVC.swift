@@ -31,6 +31,7 @@ class UsersTVC: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+
     private func fetchUsers() {
         
         guard let usersURL = ApiConstants.usersURL else { return }
