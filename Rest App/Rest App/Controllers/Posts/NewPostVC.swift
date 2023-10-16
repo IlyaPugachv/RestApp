@@ -11,7 +11,7 @@ class NewPostVC: UIViewController {
 
     @IBAction func postURLSession() {
         if let userId = user?.id,
-           let title = titleTF.text,
+        let title = titleTF.text,
            let body = bodyTV.text,
            let url = ApiConstants.postsURL {
             
