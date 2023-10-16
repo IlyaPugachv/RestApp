@@ -2,44 +2,43 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class AddNewUserVC: UIViewController {
+class EditUserVC: UIViewController {
     
-    @IBOutlet weak var nameTF: UITextField!
-    @IBOutlet weak var surNameTF: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surNameTextField: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var websiteTF: UITextField!
+    @IBOutlet weak var doneBtn: UIButton!
     
     var user: User?
     
-    @IBAction func doneBtn(_ sender: UIButton) {
-        if let nameTF = nameTF.text,
-           let surNameTF = surNameTF.text,
+    @IBAction func doneBtnAction(_ sender: UIButton) {
+        if let userId1 = user?.id,
+           let nameTextField = nameTextField.text,
+           let surNameTextField = surNameTextField.text,
            let emailTF = emailTF.text,
            let phoneTF = phoneTF.text,
-           let websiteTF = websiteTF.text,
+           let website = websiteTF.text,
            
-           let url = ApiConstants.usersURL {
+            let url = ApiConstants.usersURL {
             
             let parameters: Parameters = [
-                "name": nameTF,
-                "username": surNameTF,
+                "userId": userId1,
+                "name": nameTextField,
+                "username": surNameTextField,
                 "email": emailTF,
                 "phone": phoneTF,
-                "website": websiteTF
+                "website": website,
             ]
             
-            AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            AF.request("\(url)/\(userId1)", method: .patch, parameters: parameters, encoding: JSONEncoding.default)
                 .response { [weak self] response in
-                    debugPrint(response)
-                    debugPrint(response.result)
-                    
                     switch response.result {
                     case .success:
                         self?.navigationController?.popViewController(animated: true)
                     case .failure(let error):
                         print(error)
-                        
                     }
                 }
         }

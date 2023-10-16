@@ -4,7 +4,7 @@ import AlamofireImage
 
 class UsersTVC: UITableViewController {
     
-    var user: User? /// возможно нужно будет изменить этого юсера!
+    var user: User?
     var users: [User] = []
 
     @IBAction func addUserAction(_ sender: UIBarButtonItem) {
@@ -52,6 +52,9 @@ class UsersTVC: UITableViewController {
             vc.user = user
         }
     } /// возможно нужно убрать !!!
+   
+    
+    
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -65,8 +68,6 @@ class UsersTVC: UITableViewController {
     /// данный метод удаляет наших юзеров !
     
     private func fetchUsers() {
-
-        
         guard let usersURL = ApiConstants.usersURL else { return }
         
         URLSession.shared.dataTask(with: usersURL) { [weak self] data, response, error in

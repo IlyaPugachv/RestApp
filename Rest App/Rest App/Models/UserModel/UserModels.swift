@@ -7,15 +7,8 @@ struct User: Decodable {
     let email: String?
     let phone: String?
     let website: String?
-//    let title: String?
-//    let body: String?
     let address: Address?
     let company: Company?
 }
 
-//struct User111: Codable {
-//    let name: String
-//    let username: String
-//    
-//   
-//}
+

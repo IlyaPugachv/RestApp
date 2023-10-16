@@ -1,5 +1,7 @@
 import UIKit
 import MapKit
+import Alamofire
+import AlamofireImage
 
 final class InfoVC: UIViewController {
     
@@ -22,7 +24,21 @@ final class InfoVC: UIViewController {
         userData(user: user)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? EditUserVC {
+            vc.user = user
+        }
+    } /// возможно не нужен !!!
+    
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
+    
+    
+    @IBAction func editBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "EditUserVC") as! EditUserVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     
     @IBAction func postsBtnAction(_ sender: UIButton) {
@@ -46,10 +62,6 @@ final class InfoVC: UIViewController {
 //        vc.user = user
 //        navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-    
-    
     
     private func openMapsForUserLocation() {
         if let user = user,
@@ -102,4 +114,6 @@ final class InfoVC: UIViewController {
         toDoBtn.layer.cornerRadius = postsBtn.bounds.height / 2
         toDoBtn.clipsToBounds = true
     }
+    
+    
 }

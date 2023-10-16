@@ -23,13 +23,6 @@ class NetworkService1 {
     }
 } /// переименую и вынеси этот класс в отдельный файл!!!
 
-//class addUser {
-//    static func addUserToJSONPlaceholder(user: User, completion: @escaping () -> ()) {
-//        let urlPath = "\(ApiConstants.usersPath)/\(user)"
-//        AF.request(urlPath, method: .post, encoding: JSONEncoding.default)
-//            .response { response in
-//                completion()
-//            }
         
     
 
