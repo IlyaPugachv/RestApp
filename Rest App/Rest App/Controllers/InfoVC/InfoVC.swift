@@ -15,6 +15,8 @@ final class InfoVC: UIViewController {
     @IBOutlet weak var postsBtn: UIButton!
     @IBOutlet weak var AlbumsBtn: UIButton!
     @IBOutlet weak var toDoBtn: UIButton!
+    @IBOutlet weak var openMapsBtn: UIButton!
+    @IBOutlet weak var editUserBtn: UIButton!
     
     var user: User?
     
@@ -23,13 +25,7 @@ final class InfoVC: UIViewController {
         setupUI()
         userData(user: user)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? EditUserVC {
-            vc.user = user
-        }
-    } /// возможно не нужен !!!
-    
+        
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
     
     
@@ -37,7 +33,7 @@ final class InfoVC: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "EditUserVC") as! EditUserVC
         vc.user = user
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.present(vc, animated: true)
     }
     
     
@@ -56,11 +52,7 @@ final class InfoVC: UIViewController {
     }
     
     @IBAction func toDoBtnAction(_ sender: UIButton) {
-//        let user = users[indexPath.row]
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(identifier: "InfoVC") as! InfoVC
-//        vc.user = user
-//        navigationController?.pushViewController(vc, animated: true)
+        /// здесь у нас будет срабатываь открытие наших ToDo
     }
     
     private func openMapsForUserLocation() {
@@ -93,12 +85,20 @@ final class InfoVC: UIViewController {
             } else {
                 AddresLbl.text = "Address unknown"
             }
-            
         }
     }
     
-    
     private func setupUI() {
+        openMapsBtn.backgroundColor = UIColor.darkGray
+        openMapsBtn.tintColor = .white
+        openMapsBtn.layer.cornerRadius = postsBtn.bounds.height / 2
+        openMapsBtn.clipsToBounds = true
+        
+        editUserBtn.backgroundColor = UIColor.darkGray
+        editUserBtn.tintColor = .white
+        editUserBtn.layer.cornerRadius = postsBtn.bounds.height / 2
+        editUserBtn.clipsToBounds = true
+        
         postsBtn.backgroundColor = UIColor.darkGray
         postsBtn.tintColor = .white
         postsBtn.layer.cornerRadius = postsBtn.bounds.height / 2
@@ -114,6 +114,4 @@ final class InfoVC: UIViewController {
         toDoBtn.layer.cornerRadius = postsBtn.bounds.height / 2
         toDoBtn.clipsToBounds = true
     }
-    
-    
 }

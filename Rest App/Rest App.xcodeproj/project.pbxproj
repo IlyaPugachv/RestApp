@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A645E2AD7DC910086468B /* ExtView.swift */; };
 		BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A64612AD7DE7A0086468B /* InfoVC.swift */; };
 		BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */; };
 		BC54D3252ADD5B1D00548F8B /* EditUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */; };
@@ -42,7 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC0A645E2AD7DC910086468B /* ExtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtView.swift; sourceTree = "<group>"; };
 		BC0A64612AD7DE7A0086468B /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserVC.swift; sourceTree = "<group>"; };
 		BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserVC.swift; sourceTree = "<group>"; };
@@ -89,14 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC0A645D2AD7DC5E0086468B /* Extencions */ = {
-			isa = PBXGroup;
-			children = (
-				BC0A645E2AD7DC910086468B /* ExtView.swift */,
-			);
-			path = Extencions;
-			sourceTree = "<group>";
-		};
 		BC0A64602AD7DE4D0086468B /* InfoVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				BCF46E0D2ADBCD3B00A77F10 /* Services */,
-				BC0A645D2AD7DC5E0086468B /* Extencions */,
 				BC679C732AD6B4B100C53162 /* Models */,
 				BC679C722AD6B49500C53162 /* Controllers */,
 				BC679C702AD6B46E00C53162 /* Views */,
@@ -394,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */,
 				BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */,
 				BCF46DFE2ADAFD5000A77F10 /* PostsTVC.swift in Sources */,
 				BC679C822AD6B8A200C53162 /* ApiConstants.swift in Sources */,
