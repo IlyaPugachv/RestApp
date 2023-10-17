@@ -24,6 +24,9 @@
 		BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C882AD6B99100C53162 /* ActionCVCell.swift */; };
 		BC679C8C2AD6BA1D00C53162 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C8B2AD6BA1D00C53162 /* ImageVC.swift */; };
 		BC679C8F2AD6BA7B00C53162 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */; };
+		BC9DD29E2ADEBEE20031870B /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD29D2ADEBEE20031870B /* UserNetworkService.swift */; };
+		BC9DD2A02ADEBF010031870B /* PostNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD29F2ADEBF010031870B /* PostNetworkService.swift */; };
+		BC9DD2A32ADEC6100031870B /* ButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2A22ADEC6100031870B /* ButtonHelper.swift */; };
 		BCF46DF72ADAF06F00A77F10 /* PostFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */; };
 		BCF46DF92ADAF09500A77F10 /* AlbumsAndPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */; };
 		BCF46DFB2ADAFA7E00A77F10 /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */; };
@@ -32,8 +35,6 @@
 		BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E032ADB029400A77F10 /* PostModel.swift */; };
 		BCF46E082ADB046300A77F10 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E072ADB046300A77F10 /* AlbumModel.swift */; };
 		BCF46E0C2ADB04DF00A77F10 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */; };
-		BCF46E102ADBCE8600A77F10 /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E0F2ADBCE8600A77F10 /* FetchUsers.swift */; };
-		BCF46E132ADBD03200A77F10 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E122ADBD03200A77F10 /* NetworkServices.swift */; };
 		BCF46E162ADBD3BE00A77F10 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BCF46E152ADBD3BE00A77F10 /* Alamofire */; };
 		BCF46E192ADBD3EC00A77F10 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = BCF46E182ADBD3EC00A77F10 /* SwiftyJSON */; };
 		BCF46E1C2ADBD42300A77F10 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = BCF46E1B2ADBD42300A77F10 /* AlamofireImage */; };
@@ -60,6 +61,9 @@
 		BC679C882AD6B99100C53162 /* ActionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVCell.swift; sourceTree = "<group>"; };
 		BC679C8B2AD6BA1D00C53162 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		BC9DD29D2ADEBEE20031870B /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
+		BC9DD29F2ADEBF010031870B /* PostNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetworkService.swift; sourceTree = "<group>"; };
+		BC9DD2A22ADEC6100031870B /* ButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHelper.swift; sourceTree = "<group>"; };
 		BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
 		BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsAndPhotos.storyboard; sourceTree = "<group>"; };
 		BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToDo.storyboard; sourceTree = "<group>"; };
@@ -68,8 +72,6 @@
 		BCF46E032ADB029400A77F10 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BCF46E072ADB046300A77F10 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
-		BCF46E0F2ADBCE8600A77F10 /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
-		BCF46E122ADBD03200A77F10 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		BCF46E1D2ADBD84000A77F10 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 		BC679C5B2AD6B41D00C53162 /* Rest App */ = {
 			isa = PBXGroup;
 			children = (
+				BC9DD2A12ADEC5F70031870B /* Design */,
 				BCF46E0D2ADBCD3B00A77F10 /* Services */,
 				BC679C732AD6B4B100C53162 /* Models */,
 				BC679C722AD6B49500C53162 /* Controllers */,
@@ -217,6 +220,14 @@
 			path = UsersList;
 			sourceTree = "<group>";
 		};
+		BC9DD2A12ADEC5F70031870B /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				BC9DD2A22ADEC6100031870B /* ButtonHelper.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		BCF46DFC2ADAFD3900A77F10 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,26 +288,10 @@
 		BCF46E0D2ADBCD3B00A77F10 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BCF46E112ADBD01700A77F10 /* NetworkServices */,
-				BCF46E0E2ADBCE7100A77F10 /* FetchUsers */,
+				BC9DD29D2ADEBEE20031870B /* UserNetworkService.swift */,
+				BC9DD29F2ADEBF010031870B /* PostNetworkService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		BCF46E0E2ADBCE7100A77F10 /* FetchUsers */ = {
-			isa = PBXGroup;
-			children = (
-				BCF46E0F2ADBCE8600A77F10 /* FetchUsers.swift */,
-			);
-			path = FetchUsers;
-			sourceTree = "<group>";
-		};
-		BCF46E112ADBD01700A77F10 /* NetworkServices */ = {
-			isa = PBXGroup;
-			children = (
-				BCF46E122ADBD03200A77F10 /* NetworkServices.swift */,
-			);
-			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9DD2A02ADEBF010031870B /* PostNetworkService.swift in Sources */,
 				BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */,
 				BCF46DFE2ADAFD5000A77F10 /* PostsTVC.swift in Sources */,
 				BC679C822AD6B8A200C53162 /* ApiConstants.swift in Sources */,
@@ -393,17 +389,17 @@
 				BC679C782AD6B5C200C53162 /* UserModels.swift in Sources */,
 				BC679C7E2AD6B7E800C53162 /* Geoposition.swift in Sources */,
 				BCF46E0C2ADB04DF00A77F10 /* TodoModel.swift in Sources */,
-				BCF46E132ADBD03200A77F10 /* NetworkServices.swift in Sources */,
 				BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */,
-				BCF46E102ADBCE8600A77F10 /* FetchUsers.swift in Sources */,
 				BC679C7C2AD6B7B900C53162 /* Address.swift in Sources */,
 				BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */,
 				BCF46E012ADAFF2700A77F10 /* AlbumsTVC.swift in Sources */,
 				BC54D3252ADD5B1D00548F8B /* EditUserVC.swift in Sources */,
 				BCF46E082ADB046300A77F10 /* AlbumModel.swift in Sources */,
+				BC9DD2A32ADEC6100031870B /* ButtonHelper.swift in Sources */,
 				BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */,
 				BC679C802AD6B7FA00C53162 /* Company.swift in Sources */,
 				BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */,
+				BC9DD29E2ADEBEE20031870B /* UserNetworkService.swift in Sources */,
 				BC679C8F2AD6BA7B00C53162 /* UsersTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,11 @@ class EditUserVC: UIViewController {
     
     var user: User?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
     @IBAction func doneBtnAction(_ sender: UIButton) {
         if let userId1 = user?.id,
            let nameTextField = nameTextField.text,
@@ -42,5 +47,9 @@ class EditUserVC: UIViewController {
                     }
                 }
         }
+    }
+    
+    func setupUI() {
+        ButtonHelper.configureButton(button: doneBtn, backgroundColor: .black)
     }
 }

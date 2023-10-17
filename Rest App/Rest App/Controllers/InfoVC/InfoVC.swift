@@ -1,7 +1,6 @@
 import UIKit
 import MapKit
 import Alamofire
-import AlamofireImage
 
 final class InfoVC: UIViewController {
     
@@ -10,10 +9,10 @@ final class InfoVC: UIViewController {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
-    @IBOutlet weak var AddresLbl: UILabel!
+    @IBOutlet weak var addresLbl: UILabel!
     
     @IBOutlet weak var postsBtn: UIButton!
-    @IBOutlet weak var AlbumsBtn: UIButton!
+    @IBOutlet weak var albumsBtn: UIButton!
     @IBOutlet weak var toDoBtn: UIButton!
     @IBOutlet weak var openMapsBtn: UIButton!
     @IBOutlet weak var editUserBtn: UIButton!
@@ -28,15 +27,13 @@ final class InfoVC: UIViewController {
         
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
     
-    
     @IBAction func editBtnAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "EditUserVC") as! EditUserVC
         vc.user = user
         navigationController?.present(vc, animated: true)
     }
-    
-    
+
     @IBAction func postsBtnAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "PostsTVC") as! PostsTVC
@@ -81,37 +78,18 @@ final class InfoVC: UIViewController {
                let street = user.address?.street,
                let suite = user.address?.suite,
                let zipcode = user.address?.zipcode {
-                AddresLbl.text = "\(city)\n\(street)\n\(suite)\n\(zipcode)"
+                addresLbl.text = "\(city)\n\(street)\n\(suite)\n\(zipcode)"
             } else {
-                AddresLbl.text = "Address unknown"
+                addresLbl.text = "Address unknown"
             }
         }
     }
     
     private func setupUI() {
-        openMapsBtn.backgroundColor = UIColor.darkGray
-        openMapsBtn.tintColor = .white
-        openMapsBtn.layer.cornerRadius = postsBtn.bounds.height / 2
-        openMapsBtn.clipsToBounds = true
-        
-        editUserBtn.backgroundColor = UIColor.darkGray
-        editUserBtn.tintColor = .white
-        editUserBtn.layer.cornerRadius = postsBtn.bounds.height / 2
-        editUserBtn.clipsToBounds = true
-        
-        postsBtn.backgroundColor = UIColor.darkGray
-        postsBtn.tintColor = .white
-        postsBtn.layer.cornerRadius = postsBtn.bounds.height / 2
-        postsBtn.clipsToBounds = true
-        
-        AlbumsBtn.backgroundColor = UIColor.darkGray
-        AlbumsBtn.tintColor = .white
-        AlbumsBtn.layer.cornerRadius = postsBtn.bounds.height / 2
-        AlbumsBtn.clipsToBounds = true
-        
-        toDoBtn.backgroundColor = UIColor.darkGray
-        toDoBtn.tintColor = .white
-        toDoBtn.layer.cornerRadius = postsBtn.bounds.height / 2
-        toDoBtn.clipsToBounds = true
+        ButtonHelper.configureButton(button: postsBtn, backgroundColor: .black)
+        ButtonHelper.configureButton(button: albumsBtn, backgroundColor: .black)
+        ButtonHelper.configureButton(button: toDoBtn, backgroundColor: .black)
+        ButtonHelper.configureButton(button: openMapsBtn, backgroundColor: .black)
+        ButtonHelper.configureButton(button: editUserBtn, backgroundColor: .black)
     }
 }

@@ -20,6 +20,7 @@ class CollectionVC: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActionCVCell
         let userAction = userActions[indexPath.row].rawValue
         cell.infoLbl.text = userAction
+        cell.layer.cornerRadius = 30
         return cell
     }
 
