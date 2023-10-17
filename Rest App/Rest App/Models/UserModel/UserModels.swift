@@ -1,6 +1,6 @@
 import Foundation
 
-struct User: Codable {
+struct User: Decodable {
     let id: Int
     let name: String?
     let username: String?
@@ -10,3 +10,5 @@ struct User: Codable {
     let address: Address?
     let company: Company?
 }
+
+

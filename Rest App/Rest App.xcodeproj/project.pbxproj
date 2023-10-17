@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A645E2AD7DC910086468B /* ExtView.swift */; };
 		BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A64612AD7DE7A0086468B /* InfoVC.swift */; };
+		BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */; };
+		BC54D3252ADD5B1D00548F8B /* EditUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */; };
 		BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */; };
 		BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5E2AD6B41D00C53162 /* SceneDelegate.swift */; };
 		BC679C642AD6B41D00C53162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC679C622AD6B41D00C53162 /* Main.storyboard */; };
@@ -23,11 +24,26 @@
 		BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C882AD6B99100C53162 /* ActionCVCell.swift */; };
 		BC679C8C2AD6BA1D00C53162 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C8B2AD6BA1D00C53162 /* ImageVC.swift */; };
 		BC679C8F2AD6BA7B00C53162 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */; };
+		BCF46DF72ADAF06F00A77F10 /* PostFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */; };
+		BCF46DF92ADAF09500A77F10 /* AlbumsAndPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */; };
+		BCF46DFB2ADAFA7E00A77F10 /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */; };
+		BCF46DFE2ADAFD5000A77F10 /* PostsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46DFD2ADAFD5000A77F10 /* PostsTVC.swift */; };
+		BCF46E012ADAFF2700A77F10 /* AlbumsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E002ADAFF2700A77F10 /* AlbumsTVC.swift */; };
+		BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E032ADB029400A77F10 /* PostModel.swift */; };
+		BCF46E082ADB046300A77F10 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E072ADB046300A77F10 /* AlbumModel.swift */; };
+		BCF46E0C2ADB04DF00A77F10 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */; };
+		BCF46E102ADBCE8600A77F10 /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E0F2ADBCE8600A77F10 /* FetchUsers.swift */; };
+		BCF46E132ADBD03200A77F10 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E122ADBD03200A77F10 /* NetworkServices.swift */; };
+		BCF46E162ADBD3BE00A77F10 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BCF46E152ADBD3BE00A77F10 /* Alamofire */; };
+		BCF46E192ADBD3EC00A77F10 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = BCF46E182ADBD3EC00A77F10 /* SwiftyJSON */; };
+		BCF46E1C2ADBD42300A77F10 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = BCF46E1B2ADBD42300A77F10 /* AlamofireImage */; };
+		BCF46E1E2ADBD84000A77F10 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF46E1D2ADBD84000A77F10 /* NewPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC0A645E2AD7DC910086468B /* ExtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtView.swift; sourceTree = "<group>"; };
 		BC0A64612AD7DE7A0086468B /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserVC.swift; sourceTree = "<group>"; };
+		BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserVC.swift; sourceTree = "<group>"; };
 		BC679C592AD6B41D00C53162 /* Rest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC679C5E2AD6B41D00C53162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +60,17 @@
 		BC679C882AD6B99100C53162 /* ActionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVCell.swift; sourceTree = "<group>"; };
 		BC679C8B2AD6BA1D00C53162 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
+		BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsAndPhotos.storyboard; sourceTree = "<group>"; };
+		BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToDo.storyboard; sourceTree = "<group>"; };
+		BCF46DFD2ADAFD5000A77F10 /* PostsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTVC.swift; sourceTree = "<group>"; };
+		BCF46E002ADAFF2700A77F10 /* AlbumsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTVC.swift; sourceTree = "<group>"; };
+		BCF46E032ADB029400A77F10 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		BCF46E072ADB046300A77F10 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		BCF46E0F2ADBCE8600A77F10 /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
+		BCF46E122ADBD03200A77F10 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		BCF46E1D2ADBD84000A77F10 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,20 +78,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF46E192ADBD3EC00A77F10 /* SwiftyJSON in Frameworks */,
+				BCF46E162ADBD3BE00A77F10 /* Alamofire in Frameworks */,
+				BCF46E1C2ADBD42300A77F10 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC0A645D2AD7DC5E0086468B /* Extencions */ = {
-			isa = PBXGroup;
-			children = (
-				BC0A645E2AD7DC910086468B /* ExtView.swift */,
-			);
-			path = Extencions;
-			sourceTree = "<group>";
-		};
 		BC0A64602AD7DE4D0086468B /* InfoVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,10 +114,10 @@
 		BC679C5B2AD6B41D00C53162 /* Rest App */ = {
 			isa = PBXGroup;
 			children = (
-				BC0A645D2AD7DC5E0086468B /* Extencions */,
+				BCF46E0D2ADBCD3B00A77F10 /* Services */,
 				BC679C732AD6B4B100C53162 /* Models */,
-				BC679C702AD6B46E00C53162 /* Views */,
 				BC679C722AD6B49500C53162 /* Controllers */,
+				BC679C702AD6B46E00C53162 /* Views */,
 				BC679C762AD6B4E600C53162 /* Assets */,
 				BC679C712AD6B47E00C53162 /* App */,
 				BC679C6A2AD6B41F00C53162 /* Info.plist */,
@@ -107,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				BC679C622AD6B41D00C53162 /* Main.storyboard */,
+				BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */,
+				BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */,
+				BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */,
 				BC679C672AD6B41F00C53162 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -126,6 +151,8 @@
 			children = (
 				BC0A64602AD7DE4D0086468B /* InfoVC */,
 				BC679C8D2AD6BA6200C53162 /* UsersList */,
+				BCF46DFC2ADAFD3900A77F10 /* Posts */,
+				BCF46DFF2ADAFEFF00A77F10 /* Albums */,
 				BC679C8A2AD6B9F800C53162 /* ImageView */,
 				BC679C832AD6B8ED00C53162 /* ActionsCollection */,
 			);
@@ -135,8 +162,11 @@
 		BC679C732AD6B4B100C53162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BC679C772AD6B5C200C53162 /* UserModels.swift */,
-				BC679C812AD6B8A200C53162 /* ApiConstants.swift */,
+				BCF46E052ADB02B500A77F10 /* UserModel */,
+				BCF46E092ADB048A00A77F10 /* ApiConstants */,
+				BCF46E022ADB023E00A77F10 /* PostModel */,
+				BCF46E062ADB044600A77F10 /* AlbumModel */,
+				BCF46E0A2ADB04C500A77F10 /* ToDoModel */,
 				BC679C7A2AD6B62800C53162 /* User data */,
 			);
 			path = Models;
@@ -181,8 +211,92 @@
 			isa = PBXGroup;
 			children = (
 				BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */,
+				BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */,
+				BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */,
 			);
 			path = UsersList;
+			sourceTree = "<group>";
+		};
+		BCF46DFC2ADAFD3900A77F10 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46DFD2ADAFD5000A77F10 /* PostsTVC.swift */,
+				BCF46E1D2ADBD84000A77F10 /* NewPostVC.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		BCF46DFF2ADAFEFF00A77F10 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E002ADAFF2700A77F10 /* AlbumsTVC.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		BCF46E022ADB023E00A77F10 /* PostModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E032ADB029400A77F10 /* PostModel.swift */,
+			);
+			path = PostModel;
+			sourceTree = "<group>";
+		};
+		BCF46E052ADB02B500A77F10 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC679C772AD6B5C200C53162 /* UserModels.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		BCF46E062ADB044600A77F10 /* AlbumModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E072ADB046300A77F10 /* AlbumModel.swift */,
+			);
+			path = AlbumModel;
+			sourceTree = "<group>";
+		};
+		BCF46E092ADB048A00A77F10 /* ApiConstants */ = {
+			isa = PBXGroup;
+			children = (
+				BC679C812AD6B8A200C53162 /* ApiConstants.swift */,
+			);
+			path = ApiConstants;
+			sourceTree = "<group>";
+		};
+		BCF46E0A2ADB04C500A77F10 /* ToDoModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E0B2ADB04DF00A77F10 /* TodoModel.swift */,
+			);
+			path = ToDoModel;
+			sourceTree = "<group>";
+		};
+		BCF46E0D2ADBCD3B00A77F10 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E112ADBD01700A77F10 /* NetworkServices */,
+				BCF46E0E2ADBCE7100A77F10 /* FetchUsers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BCF46E0E2ADBCE7100A77F10 /* FetchUsers */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E0F2ADBCE8600A77F10 /* FetchUsers.swift */,
+			);
+			path = FetchUsers;
+			sourceTree = "<group>";
+		};
+		BCF46E112ADBD01700A77F10 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				BCF46E122ADBD03200A77F10 /* NetworkServices.swift */,
+			);
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +315,11 @@
 			dependencies = (
 			);
 			name = "Rest App";
+			packageProductDependencies = (
+				BCF46E152ADBD3BE00A77F10 /* Alamofire */,
+				BCF46E182ADBD3EC00A77F10 /* SwiftyJSON */,
+				BCF46E1B2ADBD42300A77F10 /* AlamofireImage */,
+			);
 			productName = "Rest App";
 			productReference = BC679C592AD6B41D00C53162 /* Rest App.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +348,11 @@
 				Base,
 			);
 			mainGroup = BC679C502AD6B41D00C53162;
+			packageReferences = (
+				BCF46E142ADBD3BE00A77F10 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BCF46E172ADBD3EC00A77F10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				BCF46E1A2ADBD42300A77F10 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = BC679C5A2AD6B41D00C53162 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,9 +367,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF46DFB2ADAFA7E00A77F10 /* ToDo.storyboard in Resources */,
+				BCF46DF72ADAF06F00A77F10 /* PostFlow.storyboard in Resources */,
 				BC679C692AD6B41F00C53162 /* LaunchScreen.storyboard in Resources */,
 				BC679C662AD6B41F00C53162 /* Assets.xcassets in Resources */,
 				BC679C642AD6B41D00C53162 /* Main.storyboard in Resources */,
+				BCF46DF92ADAF09500A77F10 /* AlbumsAndPhotos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +383,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC0A645F2AD7DC910086468B /* ExtView.swift in Sources */,
+				BCF46E042ADB029400A77F10 /* PostModel.swift in Sources */,
+				BCF46DFE2ADAFD5000A77F10 /* PostsTVC.swift in Sources */,
 				BC679C822AD6B8A200C53162 /* ApiConstants.swift in Sources */,
 				BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */,
 				BC679C8C2AD6BA1D00C53162 /* ImageVC.swift in Sources */,
 				BC679C872AD6B95900C53162 /* CollectionVC.swift in Sources */,
+				BCF46E1E2ADBD84000A77F10 /* NewPostVC.swift in Sources */,
 				BC679C782AD6B5C200C53162 /* UserModels.swift in Sources */,
 				BC679C7E2AD6B7E800C53162 /* Geoposition.swift in Sources */,
+				BCF46E0C2ADB04DF00A77F10 /* TodoModel.swift in Sources */,
+				BCF46E132ADBD03200A77F10 /* NetworkServices.swift in Sources */,
+				BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */,
+				BCF46E102ADBCE8600A77F10 /* FetchUsers.swift in Sources */,
 				BC679C7C2AD6B7B900C53162 /* Address.swift in Sources */,
 				BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */,
+				BCF46E012ADAFF2700A77F10 /* AlbumsTVC.swift in Sources */,
+				BC54D3252ADD5B1D00548F8B /* EditUserVC.swift in Sources */,
+				BCF46E082ADB046300A77F10 /* AlbumModel.swift in Sources */,
 				BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */,
 				BC679C802AD6B7FA00C53162 /* Company.swift in Sources */,
 				BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */,
@@ -491,6 +627,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCF46E142ADBD3BE00A77F10 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		BCF46E172ADBD3EC00A77F10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		BCF46E1A2ADBD42300A77F10 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCF46E152ADBD3BE00A77F10 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCF46E142ADBD3BE00A77F10 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BCF46E182ADBD3EC00A77F10 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCF46E172ADBD3EC00A77F10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		BCF46E1B2ADBD42300A77F10 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCF46E1A2ADBD42300A77F10 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC679C512AD6B41D00C53162 /* Project object */;
 }

@@ -18,7 +18,7 @@ struct ApiConstants {
     static let todosURL = URL(string: todosPath)
     
     // MARK: - Albums
-    static let albumsPath = serverPath + "alboms"
+    static let albumsPath = serverPath + "albums"
     static let albumsURL = URL(string: albumsPath)
     
     // MARK: - Photos
