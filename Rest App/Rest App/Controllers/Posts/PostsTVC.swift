@@ -25,7 +25,7 @@ class PostsTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        var post = posts[indexPath.row]
+        let post = posts[indexPath.row]
         cell.textLabel?.text = post.title
         cell.detailTextLabel?.text = post.body
         return cell
@@ -39,13 +39,20 @@ class PostsTVC: UITableViewController {
         return true
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let posts = posts[indexPath.row]
+        let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "InfoPostVC") as! InfoPostVC
+        vc.post = posts
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let postId = posts[indexPath.row].id
-            PostNetworkService.deletePost(postId: postId) { [weak self] in
-                self?.posts.remove(at: indexPath.row)
+            NetworkService.deletePost(postID: postId) { result, error in
+                self.posts.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }

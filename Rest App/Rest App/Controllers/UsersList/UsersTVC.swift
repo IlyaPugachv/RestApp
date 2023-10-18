@@ -37,14 +37,15 @@ final class UsersTVC: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "InfoVC") as! InfoVC
         vc.user = user
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let userId = users[indexPath.row].id
-            UserNetworkService.deletePost(userId: userId) { [weak self] in
-                self?.users.remove(at: indexPath.row)
+            NetworkService.deleteUser(userID: userId) { result, error in
+                self.users.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }

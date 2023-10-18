@@ -49,7 +49,10 @@ final class InfoVC: UIViewController {
     }
     
     @IBAction func toDoBtnAction(_ sender: UIButton) {
-        /// здесь у нас будет срабатываь открытие наших ToDo
+        let storyboard = UIStoryboard(name: "ToDo", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ToDoTVC") as! ToDoTVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func openMapsForUserLocation() {

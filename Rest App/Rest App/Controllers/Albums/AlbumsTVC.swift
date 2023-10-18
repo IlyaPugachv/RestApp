@@ -3,48 +3,50 @@ import UIKit
 class AlbumsTVC: UITableViewController {
     
     var user: User?
-    var albums: [Album] = []
+    var alboms: [Album]?
 
-    override func viewWillAppear(_ animated: Bool) {
-        fetchPosts()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchAlboms()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        albums.count
+        alboms?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        var post = albums[indexPath.row]
-        cell.textLabel?.text = post.title
+        let albom = alboms?[indexPath.row]
+        cell.textLabel?.text = albom?.title
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? NewPostVC {
-//            vc.user = user
-//        }
-//    }
-    private func fetchPosts() {
-        let userId = user?.id.description ?? ""
-        let urlPath = "\(ApiConstants.albumsPath)?userId=\(userId)"
-        guard let url = URL(string: urlPath) else { return  }
-        
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
-            guard let self,
-                  let data = data else { return  }
-            do {
-                albums = try JSONDecoder().decode([Album].self, from: data)
-                print(albums)
-            } catch let error {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let albom = alboms?[indexPath.row]
+        performSegue(withIdentifier: "showPhotos", sender: albom)
+    }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPhotos",
+           let vc = segue.destination as? PhotosCVC,
+           let albom = sender as? Album {
+            vc.album = albom
+        }
+    }
+    
+    private func fetchAlboms() {
+        guard let user = user else { return  }
+        NetworkService.fetchAlboms(userID: user.id) { [weak self] alboms, error in
+            if let error = error {
                 print(error)
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            } else if let alboms = alboms {
+                self?.alboms = alboms
+                self?.tableView.reloadData()
             }
         }
-        task.resume()
     }
 }
