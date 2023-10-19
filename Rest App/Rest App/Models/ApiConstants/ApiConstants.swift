@@ -24,4 +24,10 @@ struct ApiConstants {
     // MARK: - Photos
     static let photosPath = serverPath + "photos"
     static let photosURL = URL(string: photosPath)
+    
+    // MARK: - Comments
+    static let commentsPath = serverPath + "comments"
+    static let commentsURL = URL(string: commentsPath)
 }
+
+
