@@ -4,24 +4,18 @@ class PostsTVC: UITableViewController {
     
     var user: User?
     var posts: [Post] = []
-
+    
     override func viewWillAppear(_ animated: Bool) {
         fetchPosts()
     }
-
     
     @IBAction func addPostAction(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "createNewPost", sender: nil)
     }
     
-    // MARK: - Table view data source
-
- 
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         posts.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -30,14 +24,8 @@ class PostsTVC: UITableViewController {
         cell.detailTextLabel?.text = post.body
         return cell
     }
-
     
-
-   
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool { return true }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let posts = posts[indexPath.row]
@@ -46,8 +34,7 @@ class PostsTVC: UITableViewController {
         vc.post = posts
         navigationController?.pushViewController(vc, animated: true)
     }
-
-
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let postId = posts[indexPath.row].id
@@ -58,17 +45,12 @@ class PostsTVC: UITableViewController {
         }
     }
     
-
-    
-    // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? NewPostVC {
             vc.user = user
         }
     }
     
-
     private func fetchPosts() {
         let userId = user?.id.description ?? ""
         let urlPath = "\(ApiConstants.postsPath)?userId=\(userId)"

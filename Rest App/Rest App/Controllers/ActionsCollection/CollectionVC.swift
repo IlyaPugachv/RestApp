@@ -5,17 +5,13 @@ enum UserActions: String, CaseIterable {
     case users = "Open users list"
 }
 
-class CollectionVC: UICollectionViewController {
+final class CollectionVC: UICollectionViewController {
     
     private let reuseIdentifier = "Cell"
     private let userActions = UserActions.allCases
-
-    // MARK: UICollectionViewDataSource
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        userActions.count
-    }
-
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { userActions.count }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActionCVCell
         let userAction = userActions[indexPath.row].rawValue
@@ -23,14 +19,12 @@ class CollectionVC: UICollectionViewController {
         cell.layer.cornerRadius = 30
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userAction = userActions[indexPath.row]
         switch userAction {
-            case .downloadImage: performSegue(withIdentifier: "goToImageVC", sender: nil)
-            case .users: performSegue(withIdentifier: "openUsersList", sender: nil)
+        case .downloadImage: performSegue(withIdentifier: "goToImageVC", sender: nil)
+        case .users: performSegue(withIdentifier: "openUsersList", sender: nil)
         }
     }
 }

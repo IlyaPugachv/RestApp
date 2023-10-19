@@ -4,14 +4,12 @@ class AlbumsTVC: UITableViewController {
     
     var user: User?
     var alboms: [Album]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAlboms()
     }
-
-    // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         alboms?.count ?? 0
     }
@@ -27,9 +25,7 @@ class AlbumsTVC: UITableViewController {
         let albom = alboms?[indexPath.row]
         performSegue(withIdentifier: "showPhotos", sender: albom)
     }
-
-    // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPhotos",
            let vc = segue.destination as? PhotosCVC,

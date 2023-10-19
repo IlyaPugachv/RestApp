@@ -30,6 +30,7 @@ class EditPostVC: UIViewController {
                         print(error)
                     }
                 }
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }

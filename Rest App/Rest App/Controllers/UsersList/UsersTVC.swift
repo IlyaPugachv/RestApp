@@ -5,7 +5,7 @@ final class UsersTVC: UITableViewController {
     
     var user: User?
     var users: [User] = []
-
+    
     @IBAction func addUserAction(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AddNewUserVC") as! AddNewUserVC
@@ -13,22 +13,15 @@ final class UsersTVC: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        fetchUsers()
-    }
-
-    // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        users.count
-    }
-
+    override func viewWillAppear(_ animated: Bool) { fetchUsers() }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { users.count }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let user = users[indexPath.row]
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.username
-       
         return cell
     }
     
@@ -37,7 +30,6 @@ final class UsersTVC: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "InfoVC") as! InfoVC
         vc.user = user
-        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -49,7 +41,7 @@ final class UsersTVC: UITableViewController {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
-    } 
+    }
     
     private func fetchUsers() {
         guard let usersURL = ApiConstants.usersURL else { return }

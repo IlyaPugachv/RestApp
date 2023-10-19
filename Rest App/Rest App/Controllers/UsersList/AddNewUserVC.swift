@@ -2,7 +2,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class AddNewUserVC: UIViewController {
+final class AddNewUserVC: UIViewController {
     
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var surNameTF: UITextField!
@@ -19,7 +19,7 @@ class AddNewUserVC: UIViewController {
            let phoneTF = phoneTF.text,
            let websiteTF = websiteTF.text,
            
-           let url = ApiConstants.usersURL {
+            let url = ApiConstants.usersURL {
             
             let parameters: Parameters = [
                 "name": nameTF,
@@ -31,15 +31,12 @@ class AddNewUserVC: UIViewController {
             
             AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .response { [weak self] response in
-                    debugPrint(response)
-                    debugPrint(response.result)
                     
                     switch response.result {
                     case .success:
                         self?.navigationController?.popViewController(animated: true)
                     case .failure(let error):
                         print(error)
-                        
                     }
                 }
         }

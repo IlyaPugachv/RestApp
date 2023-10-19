@@ -1,14 +1,16 @@
 import UIKit
 
-class InfoPostVC: UIViewController {
+final class InfoPostVC: UIViewController {
     
     @IBOutlet weak var namePost: UILabel!
     @IBOutlet weak var surNamePost: UILabel!
+    @IBOutlet weak var infoPostBtn: UIButton!
     
     var post: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         userData(post: post)
     }
     
@@ -19,8 +21,6 @@ class InfoPostVC: UIViewController {
         navigationController?.present(vc, animated: true)
     }
     
-    
-    
     private func userData(post: Post?) {
         if let post = post {
             namePost.text = post.title
@@ -29,5 +29,9 @@ class InfoPostVC: UIViewController {
             namePost.text = "Error"
             surNamePost.text = "Error"
         }
+    }
+    
+    private func setupUI() {
+        ButtonHelper.configureButton(button: infoPostBtn, backgroundColor: .black)
     }
 }

@@ -1,7 +1,7 @@
 import UIKit
 
-class ImageVC: UIViewController {
-
+final class ImageVC: UIViewController {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -34,7 +34,7 @@ class ImageVC: UIViewController {
                 }
                 
                 if let data = data,
-                let image = UIImage(data: data) {
+                   let image = UIImage(data: data) {
                     self?.imageView.image = image
                 } else {
                     print("Error image")

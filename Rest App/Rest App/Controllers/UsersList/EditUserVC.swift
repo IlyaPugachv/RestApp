@@ -2,7 +2,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class EditUserVC: UIViewController {
+final class EditUserVC: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surNameTextField: UITextField!
@@ -46,10 +46,11 @@ class EditUserVC: UIViewController {
                         print(error)
                     }
                 }
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
-    func setupUI() {
+    private func setupUI() {
         ButtonHelper.configureButton(button: doneBtn, backgroundColor: .black)
     }
 }
