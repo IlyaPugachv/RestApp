@@ -75,6 +75,7 @@ final class NewPostVC: UIViewController {
     }
     
     private func setupUI() {
+        hideKeyboardWhenTappedAround()
         ButtonHelper.configureButton(button: urlSessionBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: AFBtn, backgroundColor: .black)
     }

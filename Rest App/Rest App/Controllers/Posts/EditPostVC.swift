@@ -9,6 +9,11 @@ class EditPostVC: UIViewController {
     
     var post: Post?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
     @IBAction func doneBtnAction(_ sender: UIButton) {
         if let postId = post?.id,
            let namePostTF = namePostTF.text,
@@ -32,6 +37,10 @@ class EditPostVC: UIViewController {
                 }
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    private func setupUI() {
+        hideKeyboardWhenTappedAround()
     }
 }
 

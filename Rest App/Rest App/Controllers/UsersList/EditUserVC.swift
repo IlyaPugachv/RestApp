@@ -51,6 +51,7 @@ final class EditUserVC: UIViewController {
     }
     
     private func setupUI() {
-        ButtonHelper.configureButton(button: doneBtn, backgroundColor: .black)
+        hideKeyboardWhenTappedAround()
+        ButtonHelper.configureButton(button: doneBtn, backgroundColor: .black) /// не работает!
     }
 }

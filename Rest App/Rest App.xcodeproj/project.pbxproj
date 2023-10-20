@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A64612AD7DE7A0086468B /* InfoVC.swift */; };
+		BC1D99C42AE26B4A009927F3 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D99C32AE26B4A009927F3 /* CacheManager.swift */; };
 		BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */; };
 		BC54D3252ADD5B1D00548F8B /* EditUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */; };
 		BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */; };
@@ -24,11 +25,12 @@
 		BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C882AD6B99100C53162 /* ActionCVCell.swift */; };
 		BC679C8C2AD6BA1D00C53162 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C8B2AD6BA1D00C53162 /* ImageVC.swift */; };
 		BC679C8F2AD6BA7B00C53162 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */; };
+		BC7C98A32AE270FB00464EF3 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7C98A22AE270FB00464EF3 /* CommentModel.swift */; };
+		BC7C98A62AE2832700464EF3 /* HideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7C98A52AE2832700464EF3 /* HideKeyboardWhenTappedAround.swift */; };
 		BC9DD29E2ADEBEE20031870B /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD29D2ADEBEE20031870B /* UserNetworkService.swift */; };
 		BC9DD2A32ADEC6100031870B /* ButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2A22ADEC6100031870B /* ButtonHelper.swift */; };
 		BC9DD2AD2AE002CE0031870B /* InfoPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2AC2AE002CE0031870B /* InfoPostVC.swift */; };
 		BC9DD2AF2AE002F90031870B /* EditPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2AE2AE002F90031870B /* EditPostVC.swift */; };
-		BC9DD2B32AE036F70031870B /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2B22AE036F70031870B /* CommentModel.swift */; };
 		BC9DD2B92AE038380031870B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2B82AE038380031870B /* PhotoModel.swift */; };
 		BC9DD2BC2AE03BDD0031870B /* PhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2BB2AE03BDD0031870B /* PhotosCVC.swift */; };
 		BC9DD2C02AE03C4D0031870B /* PhotoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2BE2AE03C4D0031870B /* PhotoCVCell.swift */; };
@@ -50,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		BC0A64612AD7DE7A0086468B /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		BC1D99C32AE26B4A009927F3 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserVC.swift; sourceTree = "<group>"; };
 		BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserVC.swift; sourceTree = "<group>"; };
 		BC679C592AD6B41D00C53162 /* Rest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,11 +71,12 @@
 		BC679C882AD6B99100C53162 /* ActionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVCell.swift; sourceTree = "<group>"; };
 		BC679C8B2AD6BA1D00C53162 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		BC679C8E2AD6BA7B00C53162 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		BC7C98A22AE270FB00464EF3 /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		BC7C98A52AE2832700464EF3 /* HideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTappedAround.swift; sourceTree = "<group>"; };
 		BC9DD29D2ADEBEE20031870B /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
 		BC9DD2A22ADEC6100031870B /* ButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHelper.swift; sourceTree = "<group>"; };
 		BC9DD2AC2AE002CE0031870B /* InfoPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostVC.swift; sourceTree = "<group>"; };
 		BC9DD2AE2AE002F90031870B /* EditPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostVC.swift; sourceTree = "<group>"; };
-		BC9DD2B22AE036F70031870B /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		BC9DD2B82AE038380031870B /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		BC9DD2BB2AE03BDD0031870B /* PhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCVC.swift; sourceTree = "<group>"; };
 		BC9DD2BE2AE03C4D0031870B /* PhotoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVCell.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		BC679C5B2AD6B41D00C53162 /* Rest App */ = {
 			isa = PBXGroup;
 			children = (
+				BC7C98A42AE2830B00464EF3 /* Extension */,
 				BC9DD2A12ADEC5F70031870B /* Design */,
 				BCF46E0D2ADBCD3B00A77F10 /* Services */,
 				BC679C732AD6B4B100C53162 /* Models */,
@@ -182,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				BC9DD2B72AE0382A0031870B /* PhotoModel */,
-				BC9DD2B02AE036D30031870B /* CommentModel */,
 				BCF46E052ADB02B500A77F10 /* UserModel */,
 				BCF46E092ADB048A00A77F10 /* ApiConstants */,
 				BCF46E022ADB023E00A77F10 /* PostModel */,
@@ -238,20 +242,20 @@
 			path = UsersList;
 			sourceTree = "<group>";
 		};
+		BC7C98A42AE2830B00464EF3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BC7C98A52AE2832700464EF3 /* HideKeyboardWhenTappedAround.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BC9DD2A12ADEC5F70031870B /* Design */ = {
 			isa = PBXGroup;
 			children = (
 				BC9DD2A22ADEC6100031870B /* ButtonHelper.swift */,
 			);
 			path = Design;
-			sourceTree = "<group>";
-		};
-		BC9DD2B02AE036D30031870B /* CommentModel */ = {
-			isa = PBXGroup;
-			children = (
-				BC9DD2B22AE036F70031870B /* CommentModel.swift */,
-			);
-			path = CommentModel;
 			sourceTree = "<group>";
 		};
 		BC9DD2B72AE0382A0031870B /* PhotoModel */ = {
@@ -319,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				BC679C772AD6B5C200C53162 /* UserModels.swift */,
+				BC7C98A22AE270FB00464EF3 /* CommentModel.swift */,
 			);
 			path = UserModel;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9DD29D2ADEBEE20031870B /* UserNetworkService.swift */,
+				BC1D99C32AE26B4A009927F3 /* CacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -445,8 +451,10 @@
 				BC679C822AD6B8A200C53162 /* ApiConstants.swift in Sources */,
 				BC9DD2C02AE03C4D0031870B /* PhotoCVCell.swift in Sources */,
 				BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */,
+				BC7C98A62AE2832700464EF3 /* HideKeyboardWhenTappedAround.swift in Sources */,
 				BC679C8C2AD6BA1D00C53162 /* ImageVC.swift in Sources */,
 				BC679C872AD6B95900C53162 /* CollectionVC.swift in Sources */,
+				BC7C98A32AE270FB00464EF3 /* CommentModel.swift in Sources */,
 				BC9DD2AF2AE002F90031870B /* EditPostVC.swift in Sources */,
 				BCF46E1E2ADBD84000A77F10 /* NewPostVC.swift in Sources */,
 				BC9DD2BC2AE03BDD0031870B /* PhotosCVC.swift in Sources */,
@@ -456,6 +464,7 @@
 				BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */,
 				BC679C7C2AD6B7B900C53162 /* Address.swift in Sources */,
 				BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */,
+				BC1D99C42AE26B4A009927F3 /* CacheManager.swift in Sources */,
 				BC9DD2AD2AE002CE0031870B /* InfoPostVC.swift in Sources */,
 				BC9DD2C42AE040BD0031870B /* ToDoTVC.swift in Sources */,
 				BCF46E012ADAFF2700A77F10 /* AlbumsTVC.swift in Sources */,
@@ -465,7 +474,6 @@
 				BC679C892AD6B99100C53162 /* ActionCVCell.swift in Sources */,
 				BC679C802AD6B7FA00C53162 /* Company.swift in Sources */,
 				BC0A64622AD7DE7A0086468B /* InfoVC.swift in Sources */,
-				BC9DD2B32AE036F70031870B /* CommentModel.swift in Sources */,
 				BC9DD29E2ADEBEE20031870B /* UserNetworkService.swift in Sources */,
 				BC9DD2B92AE038380031870B /* PhotoModel.swift in Sources */,
 				BC679C8F2AD6BA7B00C53162 /* UsersTVC.swift in Sources */,

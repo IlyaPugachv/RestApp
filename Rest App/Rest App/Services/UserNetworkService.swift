@@ -3,37 +3,18 @@ import SwiftyJSON
 import AlamofireImage
 import UIKit
 
-//class UserNetworkService {
-//    static func deletePost(userId: Int, callback: @escaping () -> ()) {
-//           let urlPath = "\(ApiConstants.usersPath)/\(userId)"
-//            AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
-//            .response { response in
-//                callback()
-//        }
-//    }
-//}
-
-//class PostNetworkService {
-//    static func deletePost(postId: Int, callback: @escaping () -> ()) {
-//           let urlPath = "\(ApiConstants.postsPath)/\(postId)"
-//            AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
-//            .response { response in
-//                callback()
-//        }
-//    }
-//}
-
 class NetworkService {
-    static func deletePost(postID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
+    
+    static func deleteUser(userID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
         
-        let urlPath = "\(ApiConstants.postsPath)/\(postID)"
+        let urlPath = "\(ApiConstants.usersPath)/\(userID)"
         
         AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
             .response { response in
-
+                
                 var jsonValue: JSON?
                 var err: Error?
-
+                
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {
@@ -48,16 +29,16 @@ class NetworkService {
             }
     }
     
-    static func deleteUser(userID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
+    static func deletePost(postID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
         
-        let urlPath = "\(ApiConstants.usersPath)/\(userID)"
+        let urlPath = "\(ApiConstants.postsPath)/\(postID)"
         
         AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
             .response { response in
-
+                
                 var jsonValue: JSON?
                 var err: Error?
-
+                
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {
@@ -78,10 +59,10 @@ class NetworkService {
         
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in
-
+                
                 var value: [Comment]?
                 var err: Error?
-
+                
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {
@@ -107,10 +88,10 @@ class NetworkService {
         
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in
-
+                
                 var value: [Album]?
                 var err: Error?
-
+                
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {
@@ -135,10 +116,10 @@ class NetworkService {
         
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in
-
+                
                 var value: [Photo]?
                 var err: Error?
-
+                
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {
@@ -158,10 +139,32 @@ class NetworkService {
     }
     
     static func getThumbnail(thumbnailURL: String, callback: @escaping (_ result: UIImage?, _ error: AFError?) -> ()) {
-        AF.request(thumbnailURL).responseImage { response in
-            switch response.result {
-                case .success(let image): callback(image, nil)
-                case .failure(let error): callback(nil, error)
+        if let image = CacheManager.shared.imageCache.image(withIdentifier: thumbnailURL) {
+            callback(image, nil)
+        } else {
+            AF.request(thumbnailURL).responseImage { response in
+                switch response.result {
+                case .success(let image):
+                    CacheManager.shared.imageCache.add(image, withIdentifier: thumbnailURL)
+                    callback(image, nil)
+                case .failure(let error):
+                    callback(nil, error)
+                }
+            }
+        }
+    }
+    
+    static func getData(from url: URL, complition: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: complition).resume()
+    }
+    
+    static func downloadImage(from url: URL, callback: @escaping (_ image: UIImage?, _ error: Error?) -> ()) {
+        getData(from: url) { data, response, error in
+            if let data,
+               let image = UIImage(data: data) {
+                callback(image, nil)
+            } else {
+                callback(nil, error)
             }
         }
     }

@@ -12,6 +12,11 @@ final class AddNewUserVC: UIViewController {
     
     var user: User?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
     @IBAction func doneBtn(_ sender: UIButton) {
         if let nameTF = nameTF.text,
            let surNameTF = surNameTF.text,
@@ -41,4 +46,12 @@ final class AddNewUserVC: UIViewController {
                 }
         }
     }
+    
+    private func setupUI() {
+        hideKeyboardWhenTappedAround()
+    }
 }
+
+
+
+
