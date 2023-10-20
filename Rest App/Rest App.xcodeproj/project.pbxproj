@@ -11,6 +11,7 @@
 		BC1D99C42AE26B4A009927F3 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D99C32AE26B4A009927F3 /* CacheManager.swift */; };
 		BC54D3232ADD1A7C00548F8B /* AddNewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */; };
 		BC54D3252ADD5B1D00548F8B /* EditUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */; };
+		BC58AA842AE2AF770033A0E2 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58AA832AE2AF770033A0E2 /* PhotoVC.swift */; };
 		BC679C5D2AD6B41D00C53162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */; };
 		BC679C5F2AD6B41D00C53162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC679C5E2AD6B41D00C53162 /* SceneDelegate.swift */; };
 		BC679C642AD6B41D00C53162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC679C622AD6B41D00C53162 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		BC1D99C32AE26B4A009927F3 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		BC54D3222ADD1A7C00548F8B /* AddNewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserVC.swift; sourceTree = "<group>"; };
 		BC54D3242ADD5B1D00548F8B /* EditUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserVC.swift; sourceTree = "<group>"; };
+		BC58AA832AE2AF770033A0E2 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
 		BC679C592AD6B41D00C53162 /* Rest App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC679C5C2AD6B41D00C53162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC679C5E2AD6B41D00C53162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 				BC0A64612AD7DE7A0086468B /* InfoVC.swift */,
 			);
 			path = InfoVC;
+			sourceTree = "<group>";
+		};
+		BC58AA822AE2AF580033A0E2 /* PhotoVC */ = {
+			isa = PBXGroup;
+			children = (
+				BC58AA832AE2AF770033A0E2 /* PhotoVC.swift */,
+			);
+			path = PhotoVC;
 			sourceTree = "<group>";
 		};
 		BC679C502AD6B41D00C53162 = {
@@ -269,6 +279,7 @@
 		BC9DD2BA2AE03BB90031870B /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				BC58AA822AE2AF580033A0E2 /* PhotoVC */,
 				BC9DD2BD2AE03C330031870B /* Cell */,
 				BC9DD2BB2AE03BDD0031870B /* PhotosCVC.swift */,
 			);
@@ -457,6 +468,7 @@
 				BC7C98A32AE270FB00464EF3 /* CommentModel.swift in Sources */,
 				BC9DD2AF2AE002F90031870B /* EditPostVC.swift in Sources */,
 				BCF46E1E2ADBD84000A77F10 /* NewPostVC.swift in Sources */,
+				BC58AA842AE2AF770033A0E2 /* PhotoVC.swift in Sources */,
 				BC9DD2BC2AE03BDD0031870B /* PhotosCVC.swift in Sources */,
 				BC679C782AD6B5C200C53162 /* UserModels.swift in Sources */,
 				BC679C7E2AD6B7E800C53162 /* Geoposition.swift in Sources */,

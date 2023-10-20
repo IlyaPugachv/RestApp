@@ -1,16 +1,10 @@
-//
-//  PhotosCVC.swift
-//  Rest App
-//
-//  Created by Илья Пугачёв on 18.10.23.
-//
-
 import UIKit
 
 class PhotosCVC: UICollectionViewController {
     
     var album: Album?
     var photos: [Photo]?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +20,7 @@ class PhotosCVC: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         photos?.count ?? 0
@@ -52,7 +35,7 @@ class PhotosCVC: UICollectionViewController {
     
     private func fetchPhotos() {
         guard let album = album else { return  }
-        NetworkService.fetchPhotos(albomID: album.id) { [weak self] photos, error in
+        NetworkService.fetchPhotos(albumID: album.id) { [weak self] photos, error in
             if let error = error {
                 print(error)
             } else if let photos = photos {
@@ -61,5 +44,13 @@ class PhotosCVC: UICollectionViewController {
             }
         }
     }
-
+    
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = photos?[indexPath.row]
+        let vc = PhotoVC()
+        vc.photo = photo
+        self.present(vc, animated: true)
+    }
 }

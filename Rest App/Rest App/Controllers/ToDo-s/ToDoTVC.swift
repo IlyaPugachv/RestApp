@@ -23,32 +23,7 @@ class ToDoTVC: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let toDo = toDo?[indexPath.row]
-//        performSegue(withIdentifier: "showPhotos", sender: toDo)
-//    }
 
-    // MARK: - Navigation
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showPhotos",
-//           let vc = segue.destination as? PhotosCVC,
-//           let albom = sender as? Albom {
-//            vc.albom = albom
-//        }
-//    }
-    
-//    private func fetchAlboms() {
-//        guard let user = user else { return  }
-//        NetworkService.fetchAlboms(userID: user.id) { [weak self] alboms, error in
-//            if let error = error {
-//                print(error)
-//            } else if let alboms = alboms {
-//                self?.alboms = alboms
-//                self?.tableView.reloadData()
-//            }
-//        }
-//    }
     private func fetchToDo() {
         let userId = user?.id.description ?? ""
         let urlPath = "\(ApiConstants.todosPath)?userId=\(userId)"

@@ -82,16 +82,16 @@ class NetworkService {
             }
     }
     
-    static func fetchAlboms(userID: Int, callback: @escaping (_ result: [Album]?, _ error: Error?) -> ()) {
+    static func fetchAlbums(userID: Int, callback: @escaping (_ result: [Album]?, _ error: Error?) -> ()) {
         
         let urlPath = "\(ApiConstants.albumsPath)?userId=\(userID)"
         
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in
-                
+
                 var value: [Album]?
                 var err: Error?
-                
+
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {
@@ -110,9 +110,9 @@ class NetworkService {
             }
     }
     
-    static func fetchPhotos(albomID: Int, callback: @escaping (_ result: [Photo]?, _ error: Error?) -> ()) {
+    static func fetchPhotos(albumID: Int, callback: @escaping (_ result: [Photo]?, _ error: Error?) -> ()) {
         
-        let urlPath = "\(ApiConstants.photosPath)?albomId=\(albomID)"
+        let urlPath = "\(ApiConstants.photosPath)?albumId=\(albumID)"
         
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in

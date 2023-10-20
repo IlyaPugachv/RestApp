@@ -1,8 +1,7 @@
 import UIKit
 import MapKit
-import Alamofire
 
-final class InfoVC: UIViewController {
+ class InfoVC: UIViewController {
     
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var userNameLbl: UILabel!

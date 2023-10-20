@@ -3,44 +3,48 @@ import UIKit
 class AlbumsTVC: UITableViewController {
     
     var user: User?
-    var alboms: [Album]?
-    
+    var albums: [Album]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchAlboms()
+        fetchAlbums()
     }
-    
+
+    // MARK: - Table view data source
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        alboms?.count ?? 0
+        albums?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let albom = alboms?[indexPath.row]
+        let albom = albums?[indexPath.row]
         cell.textLabel?.text = albom?.title
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let albom = alboms?[indexPath.row]
+        let albom = albums?[indexPath.row]
         performSegue(withIdentifier: "showPhotos", sender: albom)
     }
-    
+
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPhotos",
            let vc = segue.destination as? PhotosCVC,
-           let albom = sender as? Album {
-            vc.album = albom
+           let album = sender as? Album {
+            vc.album = album
         }
     }
     
-    private func fetchAlboms() {
+    private func fetchAlbums() {
         guard let user = user else { return  }
-        NetworkService.fetchAlboms(userID: user.id) { [weak self] alboms, error in
+        NetworkService.fetchAlbums(userID: user.id) { [weak self] albums, error in
             if let error = error {
                 print(error)
-            } else if let alboms = alboms {
-                self?.alboms = alboms
+            } else if let albums = albums {
+                self?.albums = albums
                 self?.tableView.reloadData()
             }
         }
