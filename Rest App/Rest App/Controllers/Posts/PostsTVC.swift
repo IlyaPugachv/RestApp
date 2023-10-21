@@ -1,21 +1,17 @@
 import UIKit
 
-class PostsTVC: UITableViewController {
+final class PostsTVC: UITableViewController {
     
     var user: User?
     var posts: [Post] = []
     
-    override func viewWillAppear(_ animated: Bool) {
-        fetchPosts()
-    }
+    override func viewWillAppear(_ animated: Bool) { fetchPosts() }
     
     @IBAction func addPostAction(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "createNewPost", sender: nil)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        posts.count
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { posts.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)

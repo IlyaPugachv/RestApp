@@ -10,11 +10,7 @@ class ToDoTVC: UITableViewController {
         fetchToDo()
     }
 
-    // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        toDo?.count ?? 0
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { toDo?.count ?? 0 }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -23,15 +19,14 @@ class ToDoTVC: UITableViewController {
         return cell
     }
     
-
     private func fetchToDo() {
         let userId = user?.id.description ?? ""
         let urlPath = "\(ApiConstants.todosPath)?userId=\(userId)"
-        guard let url = URL(string: urlPath) else { return  }
+        guard let url = URL(string: urlPath) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
             guard let self,
-                  let data = data else { return  }
+                  let data = data else { return }
             do {
                 toDo = try JSONDecoder().decode([ToDo].self, from: data)
             } catch let error {

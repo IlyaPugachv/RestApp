@@ -6,7 +6,7 @@ import UIKit
 class NetworkService {
     
     static func deleteUser(userID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
-        
+
         let urlPath = "\(ApiConstants.usersPath)/\(userID)"
         
         AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
@@ -88,10 +88,10 @@ class NetworkService {
         
         AF.request(urlPath, method: .get, encoding: JSONEncoding.default)
             .response { response in
-
+                
                 var value: [Album]?
                 var err: Error?
-
+                
                 switch response.result {
                 case .success(let data):
                     guard let data = data else {

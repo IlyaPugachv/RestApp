@@ -15,7 +15,7 @@ final class EditUserVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func doneBtnAction(_ sender: UIButton) {
@@ -48,10 +48,5 @@ final class EditUserVC: UIViewController {
                 }
             self.dismiss(animated: true, completion: nil)
         }
-    }
-    
-    private func setupUI() {
-        hideKeyboardWhenTappedAround()
-        ButtonHelper.configureButton(button: doneBtn, backgroundColor: .black) /// не работает!
     }
 }

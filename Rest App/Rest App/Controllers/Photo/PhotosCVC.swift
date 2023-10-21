@@ -1,6 +1,6 @@
 import UIKit
 
-class PhotosCVC: UICollectionViewController {
+final class PhotosCVC: UICollectionViewController {
     
     var album: Album?
     var photos: [Photo]?
@@ -19,13 +19,9 @@ class PhotosCVC: UICollectionViewController {
         layout.itemSize = CGSize(width: sizeWH, height: sizeWH)
         collectionView.collectionViewLayout = layout
     }
-
-    // MARK: UICollectionViewDataSource
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photos?.count ?? 0
-    }
-
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { photos?.count ?? 0 }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let photo = photos?[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoCVCell
@@ -44,8 +40,6 @@ class PhotosCVC: UICollectionViewController {
             }
         }
     }
-    
-    // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photo = photos?[indexPath.row]

@@ -2,7 +2,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class EditPostVC: UIViewController {
+final class EditPostVC: UIViewController {
     
     @IBOutlet weak var namePostTF: UITextField!
     @IBOutlet weak var surNamePostTF: UITextField!
@@ -11,7 +11,7 @@ class EditPostVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func doneBtnAction(_ sender: UIButton) {
@@ -37,10 +37,6 @@ class EditPostVC: UIViewController {
                 }
             self.dismiss(animated: true, completion: nil)
         }
-    }
-    
-    private func setupUI() {
-        hideKeyboardWhenTappedAround()
     }
 }
 

@@ -14,7 +14,7 @@ final class AddNewUserVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func doneBtn(_ sender: UIButton) {
@@ -45,10 +45,6 @@ final class AddNewUserVC: UIViewController {
                     }
                 }
         }
-    }
-    
-    private func setupUI() {
-        hideKeyboardWhenTappedAround()
     }
 }
 

@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
- class InfoVC: UIViewController {
+final class InfoVC: UIViewController {
     
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var userNameLbl: UILabel!
@@ -23,7 +23,7 @@ import MapKit
         setupUI()
         userData(user: user)
     }
-        
+    
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
     
     @IBAction func editBtnAction(_ sender: UIButton) {
@@ -32,7 +32,7 @@ import MapKit
         vc.user = user
         navigationController?.present(vc, animated: true)
     }
-
+    
     @IBAction func postsBtnAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "PostsTVC") as! PostsTVC
