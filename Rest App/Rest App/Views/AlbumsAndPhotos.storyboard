@@ -68,6 +68,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="OeP-Sa-SEC"/>
+                    <connections>
+                        <outlet property="collectionViewCell" destination="9iN-kw-gsi" id="3r3-bg-5xx"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRY-Up-1bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

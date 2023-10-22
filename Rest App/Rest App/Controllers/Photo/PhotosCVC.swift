@@ -6,10 +6,15 @@ final class PhotosCVC: UICollectionViewController {
     var photos: [Photo]?
     var user: User?
     
+    @IBOutlet var collectionViewCell: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "PhotoCVCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         fetchPhotos()
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        collectionView.addGestureRecognizer(longPressGesture)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +33,52 @@ final class PhotosCVC: UICollectionViewController {
         cell.thumbnailUrl = photo?.thumbnailUrl
         return cell
     }
+    
+    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            let touchPoint = gestureRecognizer.location(in: collectionView)
+            
+            if let indexPath = collectionView.indexPathForItem(at: touchPoint) {
+                showContextualMenu(at: indexPath)
+            }
+        }
+    }
+
+    func showContextualMenu(at indexPath: IndexPath) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] (_) in
+            self?.deleteThumbnail(at: indexPath)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            alertController.popoverPresentationController?.sourceView = cell
+            alertController.popoverPresentationController?.sourceRect = cell.bounds
+        }
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func deleteThumbnail(at indexPath: IndexPath) {
+        guard let photo = photos?[indexPath.row] else {
+            return
+        }
+        
+        NetworkService.deletePhoto(photoID: photo.id) { [weak self] result, error in
+            if let error = error {
+                print(error)
+            } else {
+                self?.photos?.remove(at: indexPath.row)
+                self?.collectionView.deleteItems(at: [indexPath])
+            }
+        }
+    }
+
     
     private func fetchPhotos() {
         guard let album = album else { return  }
