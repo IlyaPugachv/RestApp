@@ -1,8 +1,10 @@
 import UIKit
 
-class PhotoVC: UIViewController {
+final class PhotoVC: UIViewController {
     
     var photo: Photo?
+    
+    // MARK: - Lazy View
     
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView()
@@ -43,7 +45,6 @@ class PhotoVC: UIViewController {
         view.addSubview(imageView)
         imageView.addSubview(activityIndicatorView)
         setupLayoutAnhors()
-        //        setupNSLayoutConstraints()
     }
     
     private func setupLayoutAnhors() {
@@ -56,15 +57,5 @@ class PhotoVC: UIViewController {
         
         activityIndicatorView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
         activityIndicatorView.centerYAnchor.constraint(equalTo: margins.centerYAnchor).isActive = true
-    }
-    
-    private func setupNSLayoutConstraints() {
-        NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailingMargin, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1.0, constant: 0.0).isActive = true
-        
-        NSLayoutConstraint(item: activityIndicatorView, attribute: .centerX, relatedBy: .equal, toItem: imageView, attribute: .centerXWithinMargins, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: activityIndicatorView, attribute: .centerY, relatedBy: .equal, toItem: imageView, attribute: .centerYWithinMargins, multiplier: 1.0, constant: 0.0).isActive = true
     }
 }

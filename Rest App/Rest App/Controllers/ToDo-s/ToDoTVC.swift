@@ -10,6 +10,8 @@ class ToDoTVC: UITableViewController {
         fetchToDo()
     }
 
+    // MARK: - Override func tableView
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { toDo?.count ?? 0 }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -18,6 +20,8 @@ class ToDoTVC: UITableViewController {
         cell.textLabel?.text = toDo?.title
         return cell
     }
+    
+    // MARK: - FETCH TODO
     
     private func fetchToDo() {
         let userId = user?.id.description ?? ""

@@ -3,10 +3,12 @@ import SwiftyJSON
 import AlamofireImage
 import UIKit
 
+// MARK: - NetworkService
+
 class NetworkService {
     
     static func deleteUser(userID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
-
+        
         let urlPath = "\(ApiConstants.usersPath)/\(userID)"
         
         AF.request(urlPath, method: .delete, encoding: JSONEncoding.default)
@@ -76,7 +78,7 @@ class NetworkService {
                 callback(jsonValue, err)
             }
     }
-
+    
     
     
     static func fetchComments(postID: Int, callback: @escaping (_ result: [Comment]?, _ error: Error?) -> ()) {

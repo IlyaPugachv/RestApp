@@ -145,11 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				BC7C98A42AE2830B00464EF3 /* Extension */,
-				BC9DD2A12ADEC5F70031870B /* Design */,
 				BCF46E0D2ADBCD3B00A77F10 /* Services */,
 				BC679C732AD6B4B100C53162 /* Models */,
-				BC679C722AD6B49500C53162 /* Controllers */,
 				BC679C702AD6B46E00C53162 /* Views */,
+				BC679C722AD6B49500C53162 /* Controllers */,
+				BC9DD2A12ADEC5F70031870B /* Design */,
 				BC679C762AD6B4E600C53162 /* Assets */,
 				BC679C712AD6B47E00C53162 /* App */,
 				BC679C6A2AD6B41F00C53162 /* Info.plist */,
@@ -196,13 +196,12 @@
 		BC679C732AD6B4B100C53162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BC9DD2B72AE0382A0031870B /* PhotoModel */,
 				BCF46E052ADB02B500A77F10 /* UserModel */,
 				BCF46E092ADB048A00A77F10 /* ApiConstants */,
 				BCF46E022ADB023E00A77F10 /* PostModel */,
 				BCF46E062ADB044600A77F10 /* AlbumModel */,
 				BCF46E0A2ADB04C500A77F10 /* ToDoModel */,
-				BC679C7A2AD6B62800C53162 /* User data */,
+				BC9DD2B72AE0382A0031870B /* PhotoModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +334,7 @@
 			children = (
 				BC679C772AD6B5C200C53162 /* UserModels.swift */,
 				BC7C98A22AE270FB00464EF3 /* CommentModel.swift */,
+				BC679C7A2AD6B62800C53162 /* User data */,
 			);
 			path = UserModel;
 			sourceTree = "<group>";

@@ -25,16 +25,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xy1-lF-1HQ">
-                                            <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="1" width="37.666666666666664" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX7-tt-Z9t">
-                                            <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="25" width="52.666666666666664" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -48,7 +48,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="iF3-Cv-RXZ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="w3g-lq-y9a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w3g-lq-y9a">
                             <connections>
                                 <action selector="addPostAction:" destination="NKO-Fl-NYU" id="VZl-ag-lrC"/>
                             </connections>
@@ -212,7 +212,7 @@
                                                                 <rect key="frame" x="0.0" y="392.33333333333337" width="363" height="34.333333333333314"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Edit Post"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Save data"/>
                                                                 <connections>
                                                                     <action selector="editPostBtn:" destination="t6V-dZ-GY4" eventType="touchUpInside" id="XB0-Ad-FSG"/>
                                                                 </connections>
@@ -319,7 +319,7 @@
                                         <rect key="frame" x="0.0" y="224.66666666666669" width="341" height="34.333333333333314"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="plain" title="Save data" cornerStyle="capsule">
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
@@ -358,7 +358,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

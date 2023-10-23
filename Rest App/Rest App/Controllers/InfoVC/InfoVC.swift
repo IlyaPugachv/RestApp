@@ -3,12 +3,16 @@ import MapKit
 
 final class InfoVC: UIViewController {
     
+    // MARK: - @IBOutlet UILabel
+    
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var addresLbl: UILabel!
+    
+    // MARK: - @IBOutlet UIButton
     
     @IBOutlet weak var postsBtn: UIButton!
     @IBOutlet weak var albumsBtn: UIButton!
@@ -23,6 +27,8 @@ final class InfoVC: UIViewController {
         setupUI()
         userData(user: user)
     }
+    
+    // MARK: - @@IBAction
     
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
     

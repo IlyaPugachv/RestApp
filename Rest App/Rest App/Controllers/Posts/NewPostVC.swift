@@ -4,6 +4,8 @@ import Alamofire
 
 final class NewPostVC: UIViewController {
     
+    // MARK: - @IBOutlet UITextField
+    
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var bodyTV: UITextView!
     @IBOutlet weak var urlSessionBtn: UIButton!
@@ -38,10 +40,7 @@ final class NewPostVC: UIViewController {
             
             URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
                 if let data = data {
-                    let json = JSON(data)
-                    let userId = json["userId"]
-                    let title = json["title"]
-                    let body = json["body"]
+                    _ = JSON(data)
                     DispatchQueue.main.async {
                         self?.navigationController?.popViewController(animated: true)
                     }

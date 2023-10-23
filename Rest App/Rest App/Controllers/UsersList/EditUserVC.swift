@@ -4,11 +4,14 @@ import Alamofire
 
 final class EditUserVC: UIViewController {
     
+    // MARK: - @IBOutlet UITextField
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surNameTextField: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var websiteTF: UITextField!
+    @IBOutlet weak var addressTF: UITextField!
     @IBOutlet weak var doneBtn: UIButton!
     
     var user: User?
@@ -22,9 +25,9 @@ final class EditUserVC: UIViewController {
         if let userId1 = user?.id,
            let nameTextField = nameTextField.text,
            let surNameTextField = surNameTextField.text,
-           let emailTF = emailTF.text,
-           let phoneTF = phoneTF.text,
-           let website = websiteTF.text,
+           let emailTextField = emailTF.text,
+           let phoneTextField = phoneTF.text,
+           let websiteTextField = websiteTF.text,
            
             let url = ApiConstants.usersURL {
             
@@ -32,9 +35,9 @@ final class EditUserVC: UIViewController {
                 "userId": userId1,
                 "name": nameTextField,
                 "username": surNameTextField,
-                "email": emailTF,
-                "phone": phoneTF,
-                "website": website,
+                "email": emailTextField,
+                "phone": phoneTextField,
+                "website": websiteTextField,
             ]
             
             AF.request("\(url)/\(userId1)", method: .patch, parameters: parameters, encoding: JSONEncoding.default)

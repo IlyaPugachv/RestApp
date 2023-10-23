@@ -4,11 +4,14 @@ import Alamofire
 
 final class AddNewUserVC: UIViewController {
     
+    // MARK: - @IBOutlet UITextField
+    
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var surNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var websiteTF: UITextField!
+    @IBOutlet weak var addressTF: UITextField!
     
     var user: User?
     
@@ -31,7 +34,7 @@ final class AddNewUserVC: UIViewController {
                 "username": surNameTF,
                 "email": emailTF,
                 "phone": phoneTF,
-                "website": websiteTF
+                "website": websiteTF,
             ]
             
             AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)

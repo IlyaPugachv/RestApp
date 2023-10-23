@@ -1,6 +1,6 @@
 import UIKit
 
-class AlbumsTVC: UITableViewController {
+final class AlbumsTVC: UITableViewController {
     
     var user: User?
     var albums: [Album]?
@@ -9,6 +9,8 @@ class AlbumsTVC: UITableViewController {
         super.viewDidLoad()
         fetchAlbums()
     }
+    
+    // MARK: - Override Table View
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { albums?.count ?? 0 }
     
@@ -31,6 +33,8 @@ class AlbumsTVC: UITableViewController {
             vc.album = album
         }
     }
+    
+    // MARK: - FETCH Albums
     
     private func fetchAlbums() {
         guard let user = user else { return  }

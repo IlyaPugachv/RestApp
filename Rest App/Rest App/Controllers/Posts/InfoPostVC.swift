@@ -2,6 +2,8 @@ import UIKit
 
 final class InfoPostVC: UIViewController {
     
+    // MARK: - @IBOutlet UILabel
+    
     @IBOutlet weak var namePost: UILabel!
     @IBOutlet weak var surNamePost: UILabel!
     @IBOutlet weak var infoPostBtn: UIButton!

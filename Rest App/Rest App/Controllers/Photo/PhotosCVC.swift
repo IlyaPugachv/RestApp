@@ -8,13 +8,13 @@ final class PhotosCVC: UICollectionViewController {
     
     @IBOutlet var collectionViewCell: UICollectionView!
     
+    // MARK: - Override func collectionView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "PhotoCVCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         fetchPhotos()
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
-        collectionView.addGestureRecognizer(longPressGesture)
-
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +34,13 @@ final class PhotosCVC: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = photos?[indexPath.row]
+        let vc = PhotoVC()
+        vc.photo = photo
+        self.present(vc, animated: true)
+    }
+    
     @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
             let touchPoint = gestureRecognizer.location(in: collectionView)
@@ -44,7 +51,7 @@ final class PhotosCVC: UICollectionViewController {
         }
     }
 
-    func showContextualMenu(at indexPath: IndexPath) {
+    private func showContextualMenu(at indexPath: IndexPath) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] (_) in
@@ -64,10 +71,8 @@ final class PhotosCVC: UICollectionViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    func deleteThumbnail(at indexPath: IndexPath) {
-        guard let photo = photos?[indexPath.row] else {
-            return
-        }
+    private func deleteThumbnail(at indexPath: IndexPath) {
+        guard let photo = photos?[indexPath.row] else { return }
         
         NetworkService.deletePhoto(photoID: photo.id) { [weak self] result, error in
             if let error = error {
@@ -78,10 +83,16 @@ final class PhotosCVC: UICollectionViewController {
             }
         }
     }
+    
+    private func setupUI() {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        collectionView.addGestureRecognizer(longPressGesture)
+    }
 
+    // MARK: - FETCH Photos
     
     private func fetchPhotos() {
-        guard let album = album else { return  }
+        guard let album = album else { return }
         NetworkService.fetchPhotos(albumID: album.id) { [weak self] photos, error in
             if let error = error {
                 print(error)
@@ -90,12 +101,5 @@ final class PhotosCVC: UICollectionViewController {
                 self?.collectionView.reloadData()
             }
         }
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let photo = photos?[indexPath.row]
-        let vc = PhotoVC()
-        vc.photo = photo
-        self.present(vc, animated: true)
     }
 }

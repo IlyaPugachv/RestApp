@@ -5,11 +5,13 @@ final class PostsTVC: UITableViewController {
     var user: User?
     var posts: [Post] = []
     
-    override func viewWillAppear(_ animated: Bool) { fetchPosts() }
-    
     @IBAction func addPostAction(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "createNewPost", sender: nil)
     }
+    
+    // MARK: - Override Table View
+    
+    override func viewWillAppear(_ animated: Bool) { fetchPosts() }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { posts.count }
     
@@ -46,6 +48,8 @@ final class PostsTVC: UITableViewController {
             vc.user = user
         }
     }
+    
+    // MARK: - FETCH Posts
     
     private func fetchPosts() {
         let userId = user?.id.description ?? ""
