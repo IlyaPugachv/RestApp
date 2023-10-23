@@ -1,4 +1,5 @@
 import UIKit
+import Lottie
 
 enum UserActions: String, CaseIterable {
     case downloadImage = "Download image"
@@ -9,7 +10,12 @@ final class CollectionVC: UICollectionViewController {
     
     private let reuseIdentifier = "Cell"
     private let userActions = UserActions.allCases
+    private let lottieView = LottieAnimationView()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupLottieAnimation()
+    }
     // MARK: - Override Colection View
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { userActions.count }
@@ -28,6 +34,20 @@ final class CollectionVC: UICollectionViewController {
         case .downloadImage: performSegue(withIdentifier: "goToImageVC", sender: nil)
         case .users: performSegue(withIdentifier: "openUsersList", sender: nil)
         }
+    }
+    
+    private func setupLottieAnimation() {
+        let animation = LottieAnimation.named("animation4")
+        lottieView.animation = animation
+        lottieView.contentMode = .scaleAspectFit
+        lottieView.loopMode = .loop
+        lottieView.backgroundColor = .black
+        lottieView.play()
+        
+        lottieView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        lottieView.center = view.center
+        
+        view.addSubview(lottieView)
     }
 }
 

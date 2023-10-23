@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 import SwiftyJSON
 import Alamofire
 
@@ -9,7 +10,7 @@ final class NewPostVC: UIViewController {
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var bodyTV: UITextView!
     @IBOutlet weak var urlSessionBtn: UIButton!
-    @IBOutlet weak var AFBtn: UIButton!
+    @IBOutlet weak var aFBtn: UIButton!
     
     var user: User?
     
@@ -76,6 +77,6 @@ final class NewPostVC: UIViewController {
     private func setupUI() {
         hideKeyboardWhenTappedAround()
         ButtonHelper.configureButton(button: urlSessionBtn, backgroundColor: .black)
-        ButtonHelper.configureButton(button: AFBtn, backgroundColor: .black)
+        ButtonHelper.configureButton(button: aFBtn, backgroundColor: .black)
     }
 }

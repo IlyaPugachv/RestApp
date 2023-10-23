@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import Lottie
 
 final class InfoVC: UIViewController {
     
@@ -21,6 +22,7 @@ final class InfoVC: UIViewController {
     @IBOutlet weak var editUserBtn: UIButton!
     
     var user: User?
+    private let lottieView = LottieAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,10 +96,22 @@ final class InfoVC: UIViewController {
     }
     
     private func setupUI() {
+        setupLottieAnimation()
         ButtonHelper.configureButton(button: postsBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: albumsBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: toDoBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: openMapsBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: editUserBtn, backgroundColor: .black)
+    }
+    
+    private func setupLottieAnimation() {
+        let animation = LottieAnimation.named("animation3")
+        lottieView.animation = animation
+        lottieView.contentMode = .scaleAspectFit
+        lottieView.loopMode = .playOnce
+        lottieView.play()
+        
+        lottieView.frame = CGRect(x: view.frame.width - 80, y: 60, width: 65, height: 65)
+        view.addSubview(lottieView)
     }
 }

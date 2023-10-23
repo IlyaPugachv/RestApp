@@ -4,7 +4,7 @@ final class PhotoVC: UIViewController {
     
     var photo: Photo?
     
-    // MARK: - Lazy View
+    // MARK: - LAZY View
     
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView()

@@ -37,6 +37,9 @@
 		BC9DD2C02AE03C4D0031870B /* PhotoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2BE2AE03C4D0031870B /* PhotoCVCell.swift */; };
 		BC9DD2C12AE03C4D0031870B /* PhotoCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9DD2BF2AE03C4D0031870B /* PhotoCVCell.xib */; };
 		BC9DD2C42AE040BD0031870B /* ToDoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD2C32AE040BD0031870B /* ToDoTVC.swift */; };
+		BCC2EAFC2AE6A9CD00B56B22 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BCC2EAFB2AE6A9CD00B56B22 /* Lottie */; };
+		BCC2EB022AE6D8EF00B56B22 /* animation3.json in Resources */ = {isa = PBXBuildFile; fileRef = BCC2EB012AE6D8EF00B56B22 /* animation3.json */; };
+		BCC2EB0B2AE6DECE00B56B22 /* animation4.json in Resources */ = {isa = PBXBuildFile; fileRef = BCC2EB0A2AE6DECE00B56B22 /* animation4.json */; };
 		BCF46DF72ADAF06F00A77F10 /* PostFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */; };
 		BCF46DF92ADAF09500A77F10 /* AlbumsAndPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */; };
 		BCF46DFB2ADAFA7E00A77F10 /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */; };
@@ -84,6 +87,8 @@
 		BC9DD2BE2AE03C4D0031870B /* PhotoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVCell.swift; sourceTree = "<group>"; };
 		BC9DD2BF2AE03C4D0031870B /* PhotoCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCVCell.xib; sourceTree = "<group>"; };
 		BC9DD2C32AE040BD0031870B /* ToDoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTVC.swift; sourceTree = "<group>"; };
+		BCC2EB012AE6D8EF00B56B22 /* animation3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation3.json; sourceTree = "<group>"; };
+		BCC2EB0A2AE6DECE00B56B22 /* animation4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation4.json; sourceTree = "<group>"; };
 		BCF46DF62ADAF06F00A77F10 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
 		BCF46DF82ADAF09500A77F10 /* AlbumsAndPhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsAndPhotos.storyboard; sourceTree = "<group>"; };
 		BCF46DFA2ADAFA7E00A77F10 /* ToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToDo.storyboard; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 				BCF46E192ADBD3EC00A77F10 /* SwiftyJSON in Frameworks */,
 				BCF46E162ADBD3BE00A77F10 /* Alamofire in Frameworks */,
 				BCF46E1C2ADBD42300A77F10 /* AlamofireImage in Frameworks */,
+				BCC2EAFC2AE6A9CD00B56B22 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +159,8 @@
 				BC679C762AD6B4E600C53162 /* Assets */,
 				BC679C712AD6B47E00C53162 /* App */,
 				BC679C6A2AD6B41F00C53162 /* Info.plist */,
+				BCC2EB012AE6D8EF00B56B22 /* animation3.json */,
+				BCC2EB0A2AE6DECE00B56B22 /* animation4.json */,
 			);
 			path = "Rest App";
 			sourceTree = "<group>";
@@ -392,6 +400,7 @@
 				BCF46E152ADBD3BE00A77F10 /* Alamofire */,
 				BCF46E182ADBD3EC00A77F10 /* SwiftyJSON */,
 				BCF46E1B2ADBD42300A77F10 /* AlamofireImage */,
+				BCC2EAFB2AE6A9CD00B56B22 /* Lottie */,
 			);
 			productName = "Rest App";
 			productReference = BC679C592AD6B41D00C53162 /* Rest App.app */;
@@ -425,6 +434,7 @@
 				BCF46E142ADBD3BE00A77F10 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BCF46E172ADBD3EC00A77F10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				BCF46E1A2ADBD42300A77F10 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				BCC2EAFA2AE6A9CD00B56B22 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = BC679C5A2AD6B41D00C53162 /* Products */;
 			projectDirPath = "";
@@ -441,6 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF46DFB2ADAFA7E00A77F10 /* ToDo.storyboard in Resources */,
+				BCC2EB0B2AE6DECE00B56B22 /* animation4.json in Resources */,
+				BCC2EB022AE6D8EF00B56B22 /* animation3.json in Resources */,
 				BCF46DF72ADAF06F00A77F10 /* PostFlow.storyboard in Resources */,
 				BC679C692AD6B41F00C53162 /* LaunchScreen.storyboard in Resources */,
 				BC679C662AD6B41F00C53162 /* Assets.xcassets in Resources */,
@@ -713,6 +725,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BCC2EAFA2AE6A9CD00B56B22 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
 		BCF46E142ADBD3BE00A77F10 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -740,6 +760,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BCC2EAFB2AE6A9CD00B56B22 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCC2EAFA2AE6A9CD00B56B22 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		BCF46E152ADBD3BE00A77F10 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BCF46E142ADBD3BE00A77F10 /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.core.training" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Off-Qy-rwJ">
-                                <rect key="frame" x="50" y="313.66666666666669" width="293" height="249.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.line.dotted.person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Off-Qy-rwJ">
+                                <rect key="frame" x="50" y="311.66666666666669" width="293" height="254.33333333333331"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="figure.core.training" catalog="system" width="128" height="48"/>
+        <image name="person.line.dotted.person" catalog="system" width="128" height="59"/>
     </resources>
 </document>
