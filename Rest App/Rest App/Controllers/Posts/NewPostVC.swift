@@ -1,13 +1,16 @@
 import UIKit
+import SwiftUI
 import SwiftyJSON
 import Alamofire
 
 final class NewPostVC: UIViewController {
     
+    // MARK: - @IBOutlet UITextField
+    
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var bodyTV: UITextView!
     @IBOutlet weak var urlSessionBtn: UIButton!
-    @IBOutlet weak var AFBtn: UIButton!
+    @IBOutlet weak var aFBtn: UIButton!
     
     var user: User?
     
@@ -38,10 +41,7 @@ final class NewPostVC: UIViewController {
             
             URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
                 if let data = data {
-                    let json = JSON(data)
-                    let userId = json["userId"]
-                    let title = json["title"]
-                    let body = json["body"]
+                    _ = JSON(data)
                     DispatchQueue.main.async {
                         self?.navigationController?.popViewController(animated: true)
                     }
@@ -75,7 +75,8 @@ final class NewPostVC: UIViewController {
     }
     
     private func setupUI() {
+        hideKeyboardWhenTappedAround()
         ButtonHelper.configureButton(button: urlSessionBtn, backgroundColor: .black)
-        ButtonHelper.configureButton(button: AFBtn, backgroundColor: .black)
+        ButtonHelper.configureButton(button: aFBtn, backgroundColor: .black)
     }
 }

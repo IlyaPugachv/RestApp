@@ -2,6 +2,8 @@ import UIKit
 
 final class InfoPostVC: UIViewController {
     
+    // MARK: - @IBOutlet UILabel
+    
     @IBOutlet weak var namePost: UILabel!
     @IBOutlet weak var surNamePost: UILabel!
     @IBOutlet weak var infoPostBtn: UIButton!
@@ -22,13 +24,8 @@ final class InfoPostVC: UIViewController {
     }
     
     private func userData(post: Post?) {
-        if let post = post {
-            namePost.text = post.title
-            surNamePost.text = post.body
-        } else {
-            namePost.text = "Error"
-            surNamePost.text = "Error"
-        }
+        namePost.text = post?.title ?? "Error"
+        surNamePost.text = post?.body ?? "Error"
     }
     
     private func setupUI() {

@@ -13,6 +13,8 @@ final class UsersTVC: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - Override View
+    
     override func viewWillAppear(_ animated: Bool) { fetchUsers() }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { users.count }
@@ -42,6 +44,8 @@ final class UsersTVC: UITableViewController {
             }
         }
     }
+    
+    // MARK: - FETCH Users
     
     private func fetchUsers() {
         guard let usersURL = ApiConstants.usersURL else { return }

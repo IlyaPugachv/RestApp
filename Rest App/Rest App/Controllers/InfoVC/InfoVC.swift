@@ -1,8 +1,10 @@
 import UIKit
 import MapKit
-import Alamofire
+import Lottie
 
 final class InfoVC: UIViewController {
+    
+    // MARK: - @IBOutlet UILabel
     
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var userNameLbl: UILabel!
@@ -11,6 +13,8 @@ final class InfoVC: UIViewController {
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var addresLbl: UILabel!
     
+    // MARK: - @IBOutlet UIButton
+    
     @IBOutlet weak var postsBtn: UIButton!
     @IBOutlet weak var albumsBtn: UIButton!
     @IBOutlet weak var toDoBtn: UIButton!
@@ -18,13 +22,16 @@ final class InfoVC: UIViewController {
     @IBOutlet weak var editUserBtn: UIButton!
     
     var user: User?
+    private let lottieView = LottieAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         userData(user: user)
     }
-        
+    
+    // MARK: - @@IBAction
+    
     @IBAction func mapBtnAction(_ sender: UIButton) { openMapsForUserLocation() }
     
     @IBAction func editBtnAction(_ sender: UIButton) {
@@ -33,7 +40,7 @@ final class InfoVC: UIViewController {
         vc.user = user
         navigationController?.present(vc, animated: true)
     }
-
+    
     @IBAction func postsBtnAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "PostsTVC") as! PostsTVC
@@ -89,10 +96,22 @@ final class InfoVC: UIViewController {
     }
     
     private func setupUI() {
+        setupLottieAnimation()
         ButtonHelper.configureButton(button: postsBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: albumsBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: toDoBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: openMapsBtn, backgroundColor: .black)
         ButtonHelper.configureButton(button: editUserBtn, backgroundColor: .black)
+    }
+    
+    private func setupLottieAnimation() {
+        let animation = LottieAnimation.named("animation3")
+        lottieView.animation = animation
+        lottieView.contentMode = .scaleAspectFit
+        lottieView.loopMode = .playOnce
+        lottieView.play()
+        
+        lottieView.frame = CGRect(x: view.frame.width - 80, y: 60, width: 65, height: 65)
+        view.addSubview(lottieView)
     }
 }

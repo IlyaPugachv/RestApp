@@ -2,12 +2,17 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class EditPostVC: UIViewController {
+final class EditPostVC: UIViewController {
     
     @IBOutlet weak var namePostTF: UITextField!
     @IBOutlet weak var surNamePostTF: UITextField!
     
     var post: Post?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+    }
     
     @IBAction func doneBtnAction(_ sender: UIButton) {
         if let postId = post?.id,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9mM-Zs-2QC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9mM-Zs-2QC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -136,7 +136,7 @@
         <!--Users List-->
         <scene sceneID="4IB-4s-aek">
             <objects>
-                <tableViewController id="bLn-kk-0VK" customClass="UsersTVC" customModule="Rest_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UsersTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bLn-kk-0VK" customClass="UsersTVC" customModule="Rest_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qwo-va-enS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,9 +173,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users List" id="MGE-71-gr8">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="nnK-NH-KaK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nnK-NH-KaK">
                             <connections>
-                                <action selector="addUserAction:" destination="bLn-kk-0VK" id="tdD-BW-URQ"/>
+                                <action selector="addUserAction:" destination="bLn-kk-0VK" id="hTR-BW-ace"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -493,7 +493,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DcC-hx-h08">
-                                <rect key="frame" x="26" y="109" width="341" height="512"/>
+                                <rect key="frame" x="26" y="109" width="341" height="596.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit User" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdB-kv-2Nk">
                                         <rect key="frame" x="0.0" y="0.0" width="341" height="36"/>
@@ -581,13 +581,29 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zTx-oK-j6h">
+                                        <rect key="frame" x="0.0" y="477.66666666666663" width="341" height="64.333333333333371"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-73-dod">
+                                                <rect key="frame" x="0.0" y="0.0" width="341" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mkN-L7-ihP">
+                                                <rect key="frame" x="0.0" y="30.333333333333371" width="341" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-SK-Mro">
-                                        <rect key="frame" x="0.0" y="477.66666666666663" width="341" height="34.333333333333314"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="562" width="341" height="34.333333333333371"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="plain" title="Save data" cornerStyle="capsule">
                                             <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
@@ -607,6 +623,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="p8j-uY-oFE"/>
                     <connections>
+                        <outlet property="addressTF" destination="mkN-L7-ihP" id="G3f-v7-528"/>
                         <outlet property="doneBtn" destination="Ncx-SK-Mro" id="yF2-DW-9cO"/>
                         <outlet property="emailTF" destination="IFh-aA-Nd7" id="Rh9-Da-bsu"/>
                         <outlet property="nameTextField" destination="PKu-T4-f3U" id="ePI-FZ-hcA"/>
@@ -628,7 +645,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZxH-iR-xvc">
-                                <rect key="frame" x="26" y="109" width="341" height="512"/>
+                                <rect key="frame" x="26" y="109" width="341" height="596.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add User" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swk-xH-Ppp">
                                         <rect key="frame" x="0.0" y="0.0" width="341" height="36"/>
@@ -716,17 +733,33 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ju7-5D-V3z">
+                                        <rect key="frame" x="0.0" y="477.66666666666663" width="341" height="64.333333333333371"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv9-at-5Lp">
+                                                <rect key="frame" x="0.0" y="0.0" width="341" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCO-98-H1i">
+                                                <rect key="frame" x="0.0" y="30.333333333333371" width="341" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adp-4x-vdU">
-                                        <rect key="frame" x="0.0" y="477.66666666666663" width="341" height="34.333333333333314"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="562" width="341" height="34.333333333333371"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="plain" title="Save data" cornerStyle="capsule">
                                             <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="doneBtn:" destination="g6P-Rk-cIU" eventType="touchUpInside" id="NP5-Kc-cC8"/>
+                                            <action selector="doneBtn:" destination="g6P-Rk-cIU" eventType="touchUpInside" id="ivh-DF-yXJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -742,6 +775,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="j0x-dA-fEu"/>
                     <connections>
+                        <outlet property="addressTF" destination="jCO-98-H1i" id="XHk-wt-9R0"/>
                         <outlet property="emailTF" destination="KGy-Ke-0VF" id="vMD-x6-lMJ"/>
                         <outlet property="nameTF" destination="qyc-YO-0Lk" id="Fqv-lc-5p2"/>
                         <outlet property="phoneTF" destination="gSR-G4-S4c" id="Xc5-lM-ZZr"/>
@@ -754,6 +788,7 @@
             <point key="canvasLocation" x="1804" y="1080"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">

@@ -12,8 +12,9 @@ final class ImageVC: UIViewController {
         fetchImage()
     }
     
+    // MARK: - FETCH Image
+    
     private func fetchImage() {
-        
         guard let url = URL(string: imageURL) else { return }
         
         let urlRequest = URLRequest(url: url)
